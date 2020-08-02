@@ -1,0 +1,646 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TrainingPlan.API</name>
+    </assembly>
+    <members>
+        <member name="T:CourseController">
+            <summary>
+            课程管理
+            </summary>
+        </member>
+        <member name="M:CourseController.GetCourseInfoByID(System.Int64)">
+            <summary>
+            根据ID获取课程信息
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EffectEvaluationController">
+            <summary>
+            效果评估
+            </summary>
+        </member>
+        <member name="M:EffectEvaluationController.GetEndTrainingPlan(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取已结束的培训计划
+            </summary>
+            <param name="keyWord"></param>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EffectEvaluationController.GetPersonalPlanInfo(System.String,System.Int64)">
+            <summary>
+            获取个人报告培训计划信息
+            </summary>
+            <param name="userNumber"></param>
+            <param name="planId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EffectEvaluationController.GetStuByPlanID(System.Int64)">
+            <summary>
+            获取培训计划下的学员
+            </summary>
+            <param name="planId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EffectEvaluationController.GetPersonalTheoryReportResult(System.String,System.Int64)">
+            <summary>
+            获取个人理论部分
+            </summary>
+            <param name="userNumber"></param>
+            <param name="planId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EffectEvaluationController.GetPlanReportResult(System.Int64)">
+            <summary>
+            培训计划基本信息
+            </summary>
+            <param name="planId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EffectEvaluationController.GetPlanTheoryReportResult(System.Int64)">
+            <summary>
+            理论学习部分效果评估
+            </summary>
+            <param name="planId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EffectEvaluationController.GetPersonnalReport(System.Int64,System.String,System.Int64)">
+            <summary>
+            获取个人报告
+            </summary>
+            <param name="userId"></param>
+            <param name="userNumber"></param>
+            <param name="planId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EffectEvaluationController.GetPlanReport(System.Int64)">
+            <summary>
+            获取计划的报告
+            </summary>
+            <param name="planId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LearningMapController">
+            <summary>
+            学习地图
+            </summary>
+        </member>
+        <member name="M:LessonScheduleController.GetClassroom(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            查询教室列表
+            </summary>
+            <param name="classroomType">教室类型</param>
+            <param name="classroomName">教室名称</param>
+            <param name="classroomStatus">教室状态</param>
+            <param name="pageIndex">页码</param>
+            <param name="pageSize">记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:LessonScheduleController.AddClassroom(Classroom)">
+            <summary>
+            创建教室
+            </summary>
+            <param name="classroom"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LessonScheduleController.EditClassroom(Classroom)">
+            <summary>
+            修改教室
+            </summary>
+            <param name="classroom"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LessonScheduleController.StartUse(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            启用教室
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LessonScheduleController.StopUse(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            停用教室
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LessonScheduleController.RemoveClassrooms(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            删除教室
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LessonScheduleController.GetAllTrainingPlan">
+            <summary>
+            获取所有的培训计划
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LessonScheduleController.GetNotEndTrainingPlan">
+            <summary>
+            获取所有未开始、进行中的培训计划
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LessonScheduleController.GetAllClassroom(System.String)">
+            <summary>
+            获取所有启用的教室
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LessonScheduleController.GetScheduleInfo(System.Int64,System.String,System.String,System.Int64)">
+            <summary>
+            查询课程表信息
+            </summary>
+            <param name="planID"></param>
+            <param name="trainingType"></param>
+            <param name="startDate"></param>
+            <param name="classroomId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LessonScheduleController.AddTrainingSchedule(TrainingSchedule)">
+            <summary>
+            添加课程表内容
+            </summary>
+            <param name="trainingSchedule"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LessonScheduleController.EditTrainingSchedule(TrainingSchedule)">
+            <summary>
+            修改课程表内容
+            </summary>
+            <param name="trainingSchedule"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LessonScheduleController.RemoveTrainingSchedule(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            清除课程表内容
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LessonScheduleController.GetPlanContentById(System.Int64)">
+            <summary>
+            获取培训计划内容
+            </summary>
+            <param name="planId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LessonScheduleController.GetScheduleInfoFromPlan(System.Int64,System.String,System.String)">
+            <summary>
+            从培训计划下查询课程表内容
+            </summary>
+            <param name="planID"></param>
+            <param name="trainingType"></param>
+            <param name="startDate"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MyCourseController">
+            <summary>
+            我的课程
+            </summary>
+        </member>
+        <member name="M:MyCourseController.GetMyTrainingPlanLList(System.String)">
+            <summary>
+            获取我的培训计划下拉列表
+            </summary>
+            <param name="UserID">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyCourseController.GetMyCourse(System.Int64,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取我的课程
+            </summary>
+            <param name="PlanID">计划ID</param>
+            <param name="startTime">开始时间</param>
+            <param name="endTime">结束时间</param>
+            <param name="strKeyWord">关键字</param>
+            <param name="UserID">用户ID</param>
+            <param name="pageSize">记录数</param>
+            <param name="pageIndex">页码</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyCourseController.GetStuCourseLearningRecord(System.String,System.Int64,System.Int64)">
+            <summary>
+            获取课程的学习记录
+            </summary>
+            <param name="UserID">用户ID</param>
+            <param name="PlanID">计划号</param>
+            <param name="CourseID">课程ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:MyTrainingController">
+            <summary>
+            我的培训
+            </summary>
+        </member>
+        <member name="M:MyTrainingController.GetMyTraining(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取我的培训任务
+            </summary>
+            <param name="strStatus">状态</param>
+            <param name="planName">计划名称</param>
+            <param name="startTime">开始时间</param>
+            <param name="endTime">结束时间</param>
+            <param name="UserID">用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyTrainingController.GetStuTrainingPlanContent(System.Int64,System.String)">
+            <summary>
+            获取培训内容记录
+            </summary>
+            <param name="PlanID">培训任务ID</param>
+            <param name="UserID">学员账号</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyTrainingController.GetCourseInfoByCourseID(System.Int64,System.Int64)">
+            <summary>
+            获取课程信息
+            </summary>
+            <param name="CourseID"></param>
+            <param name="RecordID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyTrainingController.GetLearningCourseStruct(System.Int64,System.Int64)">
+            <summary>
+            获取学习结构图
+            </summary>
+            <param name="courseid"></param>
+            <param name="recordID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyTrainingController.CheckLearningCondition(System.Int64,System.String)">
+            <summary>
+            检测学习条件
+            </summary>
+            <param name="ContentID">培训计划内容ID</param>
+            <param name="UserID">学员ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyTrainingController.Add_LearningRecord(System.Int64,System.String)">
+            <summary>
+            创建学习记录数据
+            </summary>
+            <param name="ContentID">计划内容ID</param>
+            <param name="UserID">学员ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyTrainingController.GetStuFromPlan(System.Int64)">
+            <summary>
+            查看培训计划下的所有学员
+            </summary>
+            <param name="PlanID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyTrainingController.LearningCoursewareByStructNodeID(System.Int64,System.Int64)">
+            <summary>
+            课程学习
+            </summary>
+            <param name="RecordID"></param>
+            <param name="NodeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyTrainingController.LearningCustomCourseWare(System.Int64,System.Int64,System.Int64)">
+            <summary>
+            学习自定义课件
+            </summary>
+            <param name="courseid"></param>
+            <param name="recordId"></param>
+            <param name="nodeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyTrainingController.Add_CourseNodeLearningStatus(System.Int64,System.Int64,System.Int64,System.String,System.Int32,System.Int32)">
+            <summary>
+            创建或修改课程节点学习记录
+            </summary>
+            <param name="RecordID">记录ID</param>
+            <param name="SrcID">课程ID</param>
+            <param name="StructID">节点ID</param>
+            <param name="NodeStatus">节点状态</param>
+            <param name="pageNum">自定义课件页码</param>
+            <param name="LearningTime">学习时长（单位：秒）</param>
+            <returns></returns>
+        </member>
+        <member name="T:MyTrainingTaskController">
+            <summary>
+            我的训练
+            </summary>
+        </member>
+        <member name="M:MyTrainingTaskController.GetMyTrainTaskPlanList(System.String)">
+            <summary>
+            我的训练下拉列表
+            </summary>
+            <param name="UserNumber">用户名</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyTrainingTaskController.GetMyTrainingTask(System.Int64,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取我的训练数据
+            </summary>
+            <param name="PlanID">计划ID</param>
+            <param name="startTime">开始时间</param>
+            <param name="endTime">结束时间</param>
+            <param name="strKeyWord">搜索关键字</param>
+            <param name="UserID">用户名</param>
+            <param name="pageSize">记录数</param>
+            <param name="pageIndex">页码</param>
+            <returns></returns>
+        </member>
+        <member name="T:RemoteServiceController">
+            <summary>
+            远程服务
+            </summary>
+        </member>
+        <member name="M:RemoteServiceController.UpdateStuScore(System.Collections.Generic.List{ExamResult})">
+            <summary>
+            更新学生考试得分
+            </summary>
+            <param name="examResults"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RemoteServiceController.UpdatePlanProgress(System.Collections.Generic.List{PlanProgress})">
+            <summary>
+             更新培训计划进度
+            </summary>
+            <param name="planProgresses"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RemoteServiceController.UpdateExamFinishRate(ExamFinishRate)">
+            <summary>
+            更新考试完成率
+            </summary>
+            <param name="examFinishRate"></param>
+            <returns></returns>
+        </member>
+        <member name="T:StatisticDataController">
+            <summary>
+            统计分析数据
+            </summary>
+        </member>
+        <member name="M:StatisticDataController.GetCurrentTrainingPlanCount">
+            <summary>
+            获取当前正在进行的培训计划数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StatisticDataController.GetTrainingPlanInfo">
+            <summary>
+            获取培训计划信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StatisticDataController.GetTrainingPlanInfoByYear(System.Int32)">
+            <summary>
+            按年份查找培训计划中人数
+            </summary>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StatisticDataController.GetTrainingPlanFinishRate(System.Boolean,System.String)">
+            <summary>
+             获取培训计划完成率
+            </summary>
+            <param name="IsAsc"></param>
+            <param name="FeildName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StatisticDataController.GetAvgLearningTime">
+            <summary>
+            获取培训计划平均学习时长
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StatisticDataController.GetCourseFinishRate(System.Boolean,System.String)">
+            <summary>
+            获取课程学习完成率
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StatisticDataController.GetKnowledgeDegree">
+            <summary>
+            获取知识点掌握度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TrainingPlanController">
+            <summary>
+            培训计划
+            </summary>
+        </member>
+        <member name="M:TrainingPlanController.#ctor(IHttpClientHelper,TrainingPlan,Microsoft.Extensions.Configuration.IConfiguration,RabbitMQClient,pf_training_plan_v1Context)">
+            <summary>
+            
+            </summary>
+            <param name="client"></param>
+            <param name="trainingPlan"></param>
+        </member>
+        <member name="M:TrainingPlanController.GetTrainingPlan(System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取培训计划
+            </summary>
+            <param name="strStatus">状态</param>
+            <param name="planName">计划名称</param>
+            <param name="startTime">开始时间</param>
+            <param name="endTime">结束时间</param>
+            <param name="pageIndex">页码</param>
+            <param name="pageSize">记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.Add_TrainingPlan(TrainingPlanModel)">
+            <summary>
+            创建培训计划
+            </summary>
+            <param name="model">计划模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.Update_TrainingPlan(TrainingPlanModel)">
+             <summary>
+            修改培训计划 
+             </summary>
+             <param name="model"></param>
+             <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.Update_QuitTrainingPlan(System.Int64)">
+            <summary>
+            中止培训计划
+            </summary>
+            <param name="TrainingPlanID">培训计划ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.Update_PublishTrainingPlan(System.Int64)">
+            <summary>
+            发布培训计划
+            </summary>
+            <param name="id"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.Delete_TrainingPlan(System.Int64)">
+            <summary>
+            删除培训计划
+            </summary>
+            <param name="TrainingPlanID">培训计划ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.PubLish_TrainingPlan(System.Int64)">
+            <summary>
+            培训计划发布
+            </summary>
+            <param name="PlanID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.GetTrainingPlanContent(System.Int64)">
+            <summary>
+            获取培训计划内容
+            </summary>
+            <param name="PlanID">培训计划ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.Update_ContentSort(System.Collections.Generic.List{ContentSort},System.String)">
+            <summary>
+            计划内容排序变更
+            </summary>
+            <param name="sortList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.Add_CourseToTrainingPlan(CourseListID)">
+            <summary>
+            课程添加到培训计划
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.Add_TrainingTaskToTrainingPlan(TrainingTaskList)">
+            <summary>
+            训练任务添加到培训计划
+            </summary>
+            <param name="trainingTask"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.Add_ExamToTrainingPlan(ExaminationList)">
+            <summary>
+            考试添加到培训计划
+            </summary>
+            <param name="examinationList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.Add_TeacherToTrainingPlan(System.Int64,System.String,System.String,System.String,System.String)">
+            <summary>
+            为训练计划内容指定教员
+            </summary>
+            <param name="ContentID">内容ID</param>
+            <param name="TeacherID">教员ID</param>
+            <param name="TeacherName">教师名字</param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.Delete_ContentFromTrainingPlan(System.Int64,System.String,System.String)">
+            <summary>
+            将内容从培训计划中移除
+            </summary>
+            <param name="id">内容ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.Add_CourseLearningCondition(ConfigLearningConditionList)">
+            <summary>
+            为课程添加学习条件
+            </summary>
+            <param name="ModelList">条件模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.Update_CourseLearningCondition(ConfigLearningConditionList)">
+            <summary>
+            修改课程学习条件
+            </summary>
+            <param name="ModelList">条件模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.GetStuToPlan(System.Int64,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Double,System.Double)">
+            <summary>
+            获取学员
+            </summary>
+            <param name="PlanID">计划ID</param>
+            <param name="eductionKey">学历</param>
+            <param name="airModelKey">机型</param>
+            <param name="skillLevelKey">技术等级</param>
+            <param name="flyStatusKey">飞行状态</param>
+            <param name="page">页码</param>
+            <param name="perPage">每页记录数</param>
+            <param name="durationStart">飞行时长起始值</param>
+            <param name="durationEnd">飞行时长结束值</param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.Add_StuToTrainingPlan(TrainingPlanStuList)">
+            <summary>
+            为培训计划添加学员
+            </summary>
+            <param name="trainingPlanStuList">学员模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.Add_StuFromRemoteService(PlanStu)">
+            <summary>
+            为培训计划添加学员
+            </summary>
+            <param name="planStu"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.Delete_StuFromTrainingPlan(StudentIDList)">
+             <summary>
+            将学员从培训计划中移除
+             </summary>
+             <param name="studentIDList"></param>
+             <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.Delete_AllStuFromTrainingPlan(System.String,System.String,System.String,System.String,System.Int64)">
+            <summary>
+            移除所有学员
+            </summary>
+            <param name="strEducation">学历</param>
+            <param name="strPlane">机型</param>
+            <param name="strSkill">技术等级</param>
+            <param name="strFlySta">飞行状态</param>
+            <param name="PlanID">计划ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.GetStuFromTrainingPlan(System.String,System.String,System.String,System.String,System.Int64,System.Int32,System.Int32)">
+            <summary>
+            查询受训学员
+            </summary>
+            <param name="strEducation">学历</param>
+            <param name="strPlane">机型</param>
+            <param name="strSkill">技术等级</param>
+            <param name="strFlySta">飞行状态</param>
+            <param name="PlanID">计划ID</param>
+            <param name="PageSize">记录数</param>
+            <param name="PageIndex">页码</param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.GetStuIDByTrainingPlan(System.Int64)">
+            <summary>
+            获取培训计划中的学员ID
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.Add_TrainingPlanFromProgram(TrainingPlanFromProgram)">
+            <summary>
+            从大纲生成培训计划
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingPlanController.GetLearningStatisticByCourseID(System.Int64,System.Int64)">
+            <summary>
+            学习统计
+            </summary>
+            <param name="PlanID">计划ID</param>
+            <param name="CourseID">课程ID</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

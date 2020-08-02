@@ -1,0 +1,6 @@
+D:\2020Work\.Net Core Web API\培训计划\TrainingPlan.API\obj\Debug\netcoreapp2.2\TrainingPlan.API.csprojAssemblyReference.cache
+D:\2020Work\.Net Core Web API\培训计划\TrainingPlan.API\obj\Debug\netcoreapp2.2\TrainingPlan.API.csproj.CoreCompileInputs.cache
+D:\2020Work\.Net Core Web API\培训计划\TrainingPlan.API\obj\Debug\netcoreapp2.2\TrainingPlan.API.RazorAssemblyInfo.cache
+D:\2020Work\.Net Core Web API\培训计划\TrainingPlan.API\obj\Debug\netcoreapp2.2\TrainingPlan.API.RazorAssemblyInfo.cs
+D:\2020Work\.Net Core Web API\培训计划\TrainingPlan.API\obj\Debug\netcoreapp2.2\TrainingPlan.API.AssemblyInfoInputs.cache
+D:\2020Work\.Net Core Web API\培训计划\TrainingPlan.API\obj\Debug\netcoreapp2.2\TrainingPlan.API.AssemblyInfo.cs
