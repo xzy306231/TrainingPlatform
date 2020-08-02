@@ -1,0 +1,468 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PeopleManager.Core</name>
+    </assembly>
+    <members>
+        <member name="P:PeopleManager.Core.Entity.BaseEntity.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.BaseEntity.DeleteFlag">
+            <summary>
+            逻辑删除
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.BaseEntity.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.BaseEntity.ModifiedTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:PeopleManager.Core.Entity.CertificateInfoEntity">
+            <summary>
+            执照信息
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.CertificateInfoEntity.PersonId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.CertificateInfoEntity.Name">
+            <summary>
+            执照名称
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.CertificateInfoEntity.Code">
+            <summary>
+            执照编号
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.CertificateInfoEntity.TypeKey">
+            <summary>
+            执照类型Key
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.CertificateInfoEntity.AirplaneModelKey">
+            <summary>
+            机型key
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.CertificateInfoEntity.AirplaneModelValue">
+            <summary>
+            机型value
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.CertificateInfoEntity.TypeValue">
+            <summary>
+            执照类型Value
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.CertificateInfoEntity.ValidKey">
+            <summary>
+            是否有效Key
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.CertificateInfoEntity.ValidValue">
+            <summary>
+            是否有效Value
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.CertificateInfoEntity.PassDate">
+            <summary>
+            考试通过日期
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.CertificateInfoEntity.GetDate">
+            <summary>
+            拿证日期
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.CertificateInfoEntity.LastEndorseDate">
+            <summary>
+            最后签注日期
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.CertificateInfoEntity.ExpirationDate">
+            <summary>
+            过期日期
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.CertificateInfoEntity.PersonInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PeopleManager.Core.Entity.LicenseInfoEntity">
+            <summary>
+            证照信息
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.LicenseInfoEntity.PersonId">
+            <summary>
+            平台中人员id
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.LicenseInfoEntity.LicenseName">
+            <summary>
+            证照名称
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.LicenseInfoEntity.ValidKey">
+            <summary>
+            是否有效
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.LicenseInfoEntity.ValidValue">
+            <summary>
+            是否有效
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.LicenseInfoEntity.StartDate">
+            <summary>
+            开始日期
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.LicenseInfoEntity.EndDate">
+            <summary>
+            结束日期
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.LicenseInfoEntity.PersonInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PeopleManager.Core.Entity.PersonInfoEntity">
+            <summary>
+            人员信息
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.OriginalId">
+            <summary>
+            原始表id
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.TeacherFlag">
+            <summary>
+            教员标志
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.StudentFlag">
+            <summary>
+            学员标志
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.UserName">
+            <summary>
+            名字
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.UserNumber">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.Birthday">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.EducationKey">
+            <summary>
+            学历key
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.EducationValue">
+            <summary>
+            学历value
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.SchoolTag">
+            <summary>
+            毕业学校
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.HouseAddress">
+            <summary>
+            家庭地址
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.RegularAddress">
+            <summary>
+            常住地
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.UserPhone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.Nationality">
+            <summary>
+            国籍
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.Nation">
+            <summary>
+            民族
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.BloodType">
+            <summary>
+            血型
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.NativePlace">
+            <summary>
+            籍贯
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.MarriageStatus">
+            <summary>
+            婚姻状况
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.StateOfHealth">
+            <summary>
+            健康状况
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.UserEmail">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.EmploymentDate">
+            <summary>
+            参加工作日期
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.PhotoPath">
+            <summary>
+            头像路径
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.QualificationName">
+            <summary>
+            资质名称
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.QualificationTypeKey">
+            <summary>
+            资质类型Key
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.QualificationTypeValue">
+            <summary>
+            资质类型Value
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.QualificationGetDate">
+            <summary>
+            获取时间
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.QualificationExpirationDate">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.WorkInfos">
+            <summary>
+            工作信息
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.CertificateInfos">
+            <summary>
+            执照信息
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.TrainingRecords">
+            <summary>
+            培训记录
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.LicenseInfos">
+            <summary>
+            证照信息
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.PersonInfoEntity.RewardsAndPunishments">
+            <summary>
+            奖惩记录
+            </summary>
+        </member>
+        <member name="T:PeopleManager.Core.Entity.RewardsAndPunishmentEntity">
+            <summary>
+            奖惩
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.RewardsAndPunishmentEntity.PersonId">
+            <summary>
+            平台中人员id
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.RewardsAndPunishmentEntity.PersonInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PeopleManager.Core.Entity.TrainingRecordEntity">
+            <summary>
+            培训记录
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.TrainingRecordEntity.PersonId">
+            <summary>
+            平台中人员id
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.TrainingRecordEntity.TrainingDate">
+            <summary>
+            培训日期
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.TrainingRecordEntity.ProjectName">
+            <summary>
+            培训项目
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.TrainingRecordEntity.Content">
+            <summary>
+            培训内容
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.TrainingRecordEntity.StatusKey">
+            <summary>
+            培训状态key
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.TrainingRecordEntity.StatusValue">
+            <summary>
+            培训状态value
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.TrainingRecordEntity.PersonInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.PersonId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.DepartmentKey">
+            <summary>
+            所属单位key
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.DepartmentValue">
+            <summary>
+            所属单位value
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.TeacherTypeKey">
+            <summary>
+            教员类型key
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.TeacherTypeValue">
+            <summary>
+            教员类型value
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.AirplaneModelKey">
+            <summary>
+            机型key
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.AirplaneModelValue">
+            <summary>
+            机型value
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.BaseKey">
+            <summary>
+            运行基地key
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.BaseValue">
+            <summary>
+            运行基地value
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.HireDate">
+            <summary>
+            入职日期
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.SkillLevelKey">
+            <summary>
+            技术等级key
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.SkillLevelValue">
+            <summary>
+            技术等级value
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.FlyStatusKey">
+            <summary>
+            飞行状态key
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.FlyStatusValue">
+            <summary>
+            飞行状态value
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.TotalDuration">
+            <summary>
+            总飞行时长
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.TrainingDuration">
+            <summary>
+            总模拟训练时长
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.ActualFlightNumber">
+            <summary>
+            总起落次数
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.ActualDuration">
+            <summary>
+            总飞行经历时间
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.CurrentActualDuration">
+            <summary>
+            模拟训练起落次数
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.CurrentFlightNumber">
+            <summary>
+            本机型起落次数
+            </summary>
+        </member>
+        <member name="P:PeopleManager.Core.Entity.WorkInfoEntity.PersonInfo">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

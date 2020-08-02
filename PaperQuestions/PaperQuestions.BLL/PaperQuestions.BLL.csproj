@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="HttpClientHelper.cs" />
+    <Compile Remove="PubMethod.cs" />
+    <Compile Remove="ReadJson.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PaperQuestions.Common\PaperQuestions.Common.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+{
+  "ConnectionStrings": {
+    "conn1": "server=192.168.1.149;userid=root;pwd=root;port=3306;database=pf_examination;sslmode=none;"
+  },
+  "UserName": "guest",
+  "Password": "guest",
+  "HostName": "192.168.1.171",
+  "Port": "5673",
+  "Exchange": "topic_exchange",
+  "RoutingKey1": "topic.logmsg",
+  "RoutingKey4": "topic.sexam",
+  "TokenUrl": "http://puxuplus-admin-service/adminv1/token/getTokenInfo?token=",
+  "DicUrl": "http://puxuplus-admin-service/adminv1/dic/getDicTypeList?dicType=",
+  "PaperImport": "http://PAPERQUESTIONS-SERVICE/paperquestion/v1/TestPaperImportToDB",
+  "UpdateStuScore": "http://COURSE-SERVICE/course/v1/UpdateStuScore",
+  "ExamFinishRate": "http://COURSE-SERVICE/course/v1/UpdateExamFinishRate"
+}

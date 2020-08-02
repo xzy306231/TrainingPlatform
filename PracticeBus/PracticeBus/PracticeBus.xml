@@ -1,0 +1,1375 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PracticeBus</name>
+    </assembly>
+    <members>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.UpdateTaskScore(System.Int64,System.Int64)">
+            <summary>
+            更新成绩单
+            </summary>
+            <param name="planId"></param>
+            <param name="taskId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.AddTask(PracticeBus.ViewModel.Task.AddMyTaskParams)">
+            <summary>
+            培训计划添加任务
+            </summary>
+            <param name="taskInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.AddTaskScore(System.Int64)">
+            <summary>
+            创建训练任务成绩表
+            培训计划开始后调用
+            </summary>
+            <param name="planId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.RemoveTask(System.Int64)">
+            <summary>
+            删除训练任务
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.TaskBus(System.Int64)">
+            <summary>
+            训练任务结果
+            </summary>
+            <param name="id">任务id</param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.TaskStatistics(System.Int64)">
+            <summary>
+            训练统计--通过与完成结果
+            </summary>
+            <param name="id">任务id</param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.TaskScores(System.Int64,System.Int64,System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            训练统计--任务成绩单列表
+            </summary>
+            <param name="id">任务id</param>
+            <param name="planId">训练计划id</param>
+            <param name="keyword">关键字</param>
+            <param name="result">0已完成|1未完成|-1未筛选</param>
+            <param name="status">0已完成|1未完成|-1未筛选</param>
+            <param name="page">页码</param>
+            <param name="perPage">每页行数</param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.MyTaskStatistics(System.Int64,System.Int64)">
+            <summary>
+            单个学员任务统计
+            </summary>
+            <param name="id">任务成绩id</param>
+            <param name="userId">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.SubjectInfo(System.Int64)">
+            <summary>
+            科目详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.TaskScoreSetValue(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            任务设置状态或结果值
+            </summary>
+            <param name="status"></param>
+            <param name="result"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.SubjectScoreSetValue(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            科目设置状态或结果值
+            </summary>
+            <param name="id"></param>
+            <param name="status"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.TaskAnalysisStatistics">
+            <summary>
+            任务分析统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.TaskAnalysisDetail(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            任务分析详情
+            </summary>
+            <param name="page"></param>
+            <param name="perPage"></param>
+            <param name="sortBy">status/result</param>
+            <param name="order">asc/desc</param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.SubjectAnalysisStatistics">
+            <summary>
+            科目分析统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.SubjectAnalysisDetail(System.Int32,System.Int32)">
+            <summary>
+            科目分析详情
+            </summary>
+            <param name="page"></param>
+            <param name="perPage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.PersonalReportInfo(System.Int64,System.Int64)">
+            <summary>
+            个人训练任务报告信息
+            </summary>
+            <param name="userId"></param>
+            <param name="planId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.CollectiveReportInfo(System.Int64)">
+            <summary>
+            单个任务的报告信息
+            </summary>
+            <param name="planId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.UpdatePersonOfTask(PracticeBus.ViewModel.MyTaskPersonUpdateDto)">
+            <summary>
+            服务间调度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeBus.Controllers.PracticeBusController.SingleTaskStatus(System.Int64,System.Int64,System.Int64)">
+            <summary>
+            训练任务完成情况
+            </summary>
+            <param name="planId">计划id</param>
+            <param name="taskId">任务id</param>
+            <param name="userId">人员id</param>
+            <returns></returns>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBus.ClassifyKey">
+            <summary>
+            训练分类
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBus.ClassifyValue">
+            <summary>
+            训练分类
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBus.CreatorId">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBus.CreatorName">
+            <summary>
+            创建人名
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBus.DeleteFlag">
+            <summary>
+            逻辑删除
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBus.Description">
+            <summary>
+            训练科目描述
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBus.ExpectResult">
+            <summary>
+            期望结果
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBus.Id">
+            <summary>
+            自增主键
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBus.Name">
+            <summary>
+            训练科目名称
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBus.Number">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBus.OriginalId">
+            <summary>
+            原始表id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBus.PlaneTypeValue">
+            <summary>
+            机型value
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBus.PlaneTypeKey">
+            <summary>
+            机型key
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBus.TCreate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBus.TModified">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBus.TagDisplay">
+            <summary>
+            知识点展示
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBus.TaskBusId">
+            <summary>
+            任务id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBus.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="T:PracticeBus.Entity.TSubjectBusScore">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusScore.DeleteFlag">
+            <summary>
+            逻辑删除
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusScore.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusScore.OriginalId">
+            <summary>
+            科目原始id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusScore.PlanId">
+            <summary>
+            培训计划id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusScore.Result">
+            <summary>
+            结果 0通过 1未通过
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusScore.Status">
+            <summary>
+            状态 0完成 1未完成
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusScore.SubjectBusId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusScore.TCreate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusScore.TModified">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusScore.TaskBusId">
+            <summary>
+            任务id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusScore.TaskScoreId">
+            <summary>
+            任务成绩表id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusScore.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="T:PracticeBus.Entity.TSubjectBusTagRef">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusTagRef.DeleteFlag">
+            <summary>
+            逻辑删除
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusTagRef.SubjectBus_id">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusTagRef.TCreate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusTagRef.TModified">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusTagRef.KnowledgeTag_id">
+            <summary>
+            知识点id
+            </summary>
+        </member>
+        <member name="T:PracticeBus.Entity.TKnowledgeTag">
+            <summary>
+            知识点、技能点等标签信息
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TKnowledgeTag.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TKnowledgeTag.DeleteFlag">
+            <summary>
+            删除标识
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TKnowledgeTag.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TKnowledgeTag.SrcId">
+            <summary>
+            源ID
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TKnowledgeTag.Tag">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TKnowledgeTag.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.AirplaneTypeKey">
+            <summary>
+            适用机型key
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.AirplaneTypeValue">
+            <summary>
+            适用机型value
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.ClassHour">
+            <summary>
+            课时
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.CreatorId">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.CreatorName">
+            <summary>
+            创建人名
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.DeleteFlag">
+            <summary>
+            逻辑删除
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.LevelKey">
+            <summary>
+            级别等级key
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.LevelValue">
+            <summary>
+            级别等级value
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.OriginalId">
+            <summary>
+            资源库的id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.PlanId">
+            <summary>
+            培训计划id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.TCreate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.TModified">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.TagDisplay">
+            <summary>
+            标签显示
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.TaskDesc">
+            <summary>
+            任务描述
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.TaskTypeKey">
+            <summary>
+            任务类别key
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.TaskTypeValue">
+            <summary>
+            任务类别value
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.TypeLevelKey">
+            <summary>
+            类别等级key
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBus.TypeLevelValue">
+            <summary>
+            类别等级value
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusScore.SubjectBusScores">
+            <summary>
+            一对多
+            任务成绩对应科目成绩
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusScore.TaskBus">
+            <summary>
+            一对一
+            任务成绩和任务
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusScore.DeleteFlag">
+            <summary>
+            逻辑删除
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusScore.Department">
+            <summary>
+            所属部门
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusScore.Duration">
+            <summary>
+            持续时长(秒)
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusScore.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusScore.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusScore.PlanId">
+            <summary>
+            培训计划id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusScore.Result">
+            <summary>
+            训练结果 0通过 1未通过
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusScore.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusScore.Status">
+            <summary>
+            训练状态 0完成 1未完成
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusScore.TCreate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusScore.TModify">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusScore.TaskBusId">
+            <summary>
+            训练任务id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusScore.UserId">
+            <summary>
+            人员id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusScore.UserName">
+            <summary>
+            学员名字
+            </summary>
+        </member>
+        <member name="T:PracticeBus.Entity.TPlanCourseTaskExamRef">
+            <summary>
+            培训计划与课程、训练任务关系表
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TPlanCourseTaskExamRef.AvgLearningtime">
+            <summary>
+            学员学习平均时长(单位：秒)
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TPlanCourseTaskExamRef.ContentId">
+            <summary>
+            课程id，任务id,，考试id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TPlanCourseTaskExamRef.ContentSort">
+            <summary>
+            内容排序
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TPlanCourseTaskExamRef.CreateBy">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TPlanCourseTaskExamRef.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TPlanCourseTaskExamRef.DeleteFlag">
+            <summary>
+            删除标识
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TPlanCourseTaskExamRef.Dif">
+            <summary>
+            1:课程，2:训练任务，3:考试名称
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TPlanCourseTaskExamRef.FinishRate">
+            <summary>
+            课程学习完成率
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TPlanCourseTaskExamRef.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TPlanCourseTaskExamRef.PlanId">
+            <summary>
+            培训计划ID
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TPlanCourseTaskExamRef.TeacherName">
+            <summary>
+            教员名称
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TPlanCourseTaskExamRef.TeacherNum">
+            <summary>
+            教员用户名
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TPlanCourseTaskExamRef.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusStatistics.DeleteFlag">
+            <summary>
+            逻辑删除
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusStatistics.FinishNum">
+            <summary>
+            完成人数
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusStatistics.FinishPercent">
+            <summary>
+            完成率
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusStatistics.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusStatistics.PassNum">
+            <summary>
+            通过人数
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusStatistics.PassPercent">
+            <summary>
+            通过率
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusStatistics.PlanId">
+            <summary>
+            培训计划id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusStatistics.SubjectBusId">
+            <summary>
+            科目业务id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusStatistics.SubjectName">
+            <summary>
+            科目名
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusStatistics.SubjectOriginalId">
+            <summary>
+            科目资源id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusStatistics.TCreate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TSubjectBusStatistics.TModify">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusStatistics.AttendNum">
+            <summary>
+            本次任务完成人数
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusStatistics.DeleteFlag">
+            <summary>
+            逻辑删除
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusStatistics.DurationAvg">
+            <summary>
+            平均时长(小时)
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusStatistics.DurationTotal">
+            <summary>
+            总时长(小时)
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusStatistics.FinishPercent">
+            <summary>
+            完成率
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusStatistics.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusStatistics.PassPercent">
+            <summary>
+            通过率
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusStatistics.PlanId">
+            <summary>
+            培训计划id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusStatistics.SubjectNum">
+            <summary>
+            本次任务下的科目数
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusStatistics.TCreate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusStatistics.TModify">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusStatistics.TaskBusId">
+            <summary>
+            任务业务id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusStatistics.TaskName">
+            <summary>
+            任务名
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTaskBusStatistics.TaskOriginalId">
+            <summary>
+            任务资源id
+            </summary>
+        </member>
+        <member name="T:PracticeBus.Entity.TTrainingplanStu">
+            <summary>
+            参与培训的学员
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTrainingplanStu.ActualDuration">
+            <summary>
+            飞行时长
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTrainingplanStu.Airplane">
+            <summary>
+            机型
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTrainingplanStu.CreateBy">
+            <summary>
+            创建人ID
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTrainingplanStu.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTrainingplanStu.DeleteFlag">
+            <summary>
+            删除标识
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTrainingplanStu.Department">
+            <summary>
+            部门
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTrainingplanStu.FlyStatus">
+            <summary>
+            飞行状态
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTrainingplanStu.PhotoPath">
+            <summary>
+            图片路径
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTrainingplanStu.SkillLevel">
+            <summary>
+            技术等级
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTrainingplanStu.TrainingplanId">
+            <summary>
+            培训计划ID
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTrainingplanStu.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTrainingplanStu.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTrainingplanStu.UserName">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:PracticeBus.Entity.TTrainingplanStu.UserNumber">
+            <summary>
+            账户
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.MyTaskPersonUpdateDto.PlanId">
+            <summary>
+            计划id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.MyTaskPersonUpdateDto.TaskId">
+            <summary>
+            任务id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.MyTaskPersonUpdateDto.NewUsers">
+            <summary>
+            新增人员信息
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.MyTaskPersonUpdateDto.RemoveUsers">
+            <summary>
+            删除人员信息
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.UserInfo.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.UserInfo.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.UserInfo.Department">
+            <summary>
+            所属部门
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.AttendNumb">
+            <summary>
+            参与人数
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.AttendFlag">
+            <summary>
+            参与人数超出/低于
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.AttendNumbDif">
+            <summary>
+            超出/低于平均的人数
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.TotalDuration">
+            <summary>
+            模拟练习总时长
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.AvgDuration">
+            <summary>
+            平均时长
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.TotalAvgDuration">
+            <summary>
+            所有培训平均练习时长
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.AvgDurationFlag">
+            <summary>
+            超出/低于平均的时长标志
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.AvgDurationDif">
+            <summary>
+            超出/低于平均的时长数
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.TotalSubjectNumb">
+            <summary>
+            科目总数
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.FinishSubjectNumb">
+            <summary>
+            完成科目数
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.AvgFinishSubject">
+            <summary>
+            平均完成率
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.TotalAvgFinishSubject">
+            <summary>
+            所有培训平均完成率
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.AvgFinishSubjectFlag">
+            <summary>
+            超出/低于平均完成率标志
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.AvgFinishSubjectDif">
+            <summary>
+            超出/低于平均完成的百分比
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.PassSubjectNumb">
+            <summary>
+            通过科目数
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.AvgPassSubject">
+            <summary>
+            平均通过率
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.TotalAvgPassSubject">
+            <summary>
+            所有培训平均通过率
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.AvgPassSubjectFlag">
+            <summary>
+            超出/低于平均通过率标志
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.AvgPassSubjectDif">
+            <summary>
+            超出/低于平均通过的百分比
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.CollectiveResult.TaskGlobalResult">
+            <summary>
+            模拟训练整体结果，0：未达标，1：达标
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalInfo.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalInfo.Duration">
+            <summary>
+            训练时长
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalInfo.FinishPercent">
+            <summary>
+            完成百分比
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalInfo.PassPercent">
+            <summary>
+            通过百分比
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TotalSubjectNumb">
+            <summary>
+            本次训练总科目
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.FinishSubjectNumb">
+            <summary>
+            完成科目
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskTrainSumTime">
+            <summary>
+            总练习时长
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskTrainTimeRank">
+            <summary>
+            练习时长排名
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskTrainTimeExceedPercent">
+            <summary>
+            超出时长百分比
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskTrainAvgLearningTime">
+            <summary>
+            平均练习时长
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskTrainLevelFlag">
+            <summary>
+            超出、低于标识
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskTrainDifHours">
+            <summary>
+            超出低于水平线小时数
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskFinishRate">
+            <summary>
+            总完成率
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskFinishRateRank">
+            <summary>
+            完成率排名
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskFinishRateExceedPercent">
+            <summary>
+            超出的完成率百分比
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskFinishAvgRate">
+            <summary>
+            平均完成率
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskFinishRateFlag">
+            <summary>
+            超出、低于标识
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskFinishDifRate">
+            <summary>
+            超出、低于的完成率
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskPassRate">
+            <summary>
+            科目通过率
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskPassRateRank">
+            <summary>
+            通过率排名
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskPassRatePercent">
+            <summary>
+            超出的通过率百分比
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskPassAvgRate">
+            <summary>
+            平均通过率
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskPassRateFlag">
+            <summary>
+            超出、低于标识
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskPassDifRate">
+            <summary>
+            超出、低于的通过率
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Report.PersonalResult.TaskGlobalResult">
+            <summary>
+            模拟训练整体结果，0：未达标，1：达标
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.SubjectScore.SubjectScoreQueryDto.SubjectBusId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.SubjectScore.SubjectScoreQueryDto.OriginalId">
+            <summary>
+            科目原始id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.SubjectScore.SubjectScoreQueryDto.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.SubjectScore.SubjectScoreQueryDto.TagDisplay">
+            <summary>
+            标签展示
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.SubjectScore.SubjectScoreQueryDto.Desc">
+            <summary>
+            科目简介
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.SubjectScore.SubjectScoreQueryDto.AirplaneValue">
+            <summary>
+            适用机型value
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.SubjectScore.SubjectScoreQueryDto.ClassifyValue">
+            <summary>
+            分类value
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.SubjectScore.SubjectScoreQueryDto.Result">
+            <summary>
+            科目结果
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.SubjectScore.SubjectScoreQueryDto.Status">
+            <summary>
+            科目状态
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Subject.BaseSubjectDto.Number">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Subject.BaseSubjectDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Subject.BaseSubjectDto.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Subject.BaseSubjectDto.ClassifyKey">
+            <summary>
+            分类key
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Subject.BaseSubjectDto.ClassifyValue">
+            <summary>
+            分类value
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Subject.BaseSubjectDto.PlaneTypeKey">
+            <summary>
+            适用机型key
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Subject.BaseSubjectDto.PlaneTypeValue">
+            <summary>
+            适用机型value
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Subject.BaseSubjectDto.ExpectResult">
+            <summary>
+            预期结果
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Subject.BaseSubjectDto.CreatorId">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Subject.BaseSubjectDto.CreatorName">
+            <summary>
+            创建人名
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Subject.BaseSubjectDto.TagDisplay">
+            <summary>
+            标签展示
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Subject.SubjectFullDto.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Subject.SubjectFullDto.OriginalId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Subject.SubjectNewDto.OriginalId">
+            <summary>
+            资源库中id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Subject.SubjectNewDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.TagDto.SrcId">
+            <summary>
+            知识点原始id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.TagDto.Tag">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.TaskScore.TaskScoreQueryDto.Id">
+            <summary>
+            id 
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.TaskScore.TaskScoreQueryDto.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.TaskScore.TaskScoreQueryDto.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.TaskScore.TaskScoreQueryDto.Department">
+            <summary>
+            所属部门
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.TaskScore.TaskScoreQueryDto.Result">
+            <summary>
+            训练结果
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.TaskScore.TaskScoreQueryDto.Status">
+            <summary>
+            训练状态
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.TaskStatistics.TaskBusStatisticsQueryDto.TaskName">
+            <summary>
+            任务名
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.TaskStatistics.TaskBusStatisticsQueryDto.DurationAvg">
+            <summary>
+            业务平均时长
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.TaskStatistics.TaskBusStatisticsQueryDto.FinishPercent">
+            <summary>
+            业务平均完成率
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.TaskStatistics.TaskBusStatisticsQueryDto.PassPercent">
+            <summary>
+            业务平均通过率
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.AddMyTaskParams.PlanId">
+            <summary>
+            培训计划id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.AddMyTaskParams.CreatorId">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.AddMyTaskParams.TeacherNum">
+            <summary>
+            教员用户名
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.AddMyTaskParams.TeacherName">
+            <summary>
+            教员名称
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.BaseTaskDto.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.BaseTaskDto.TaskDesc">
+            <summary>
+            任务描述
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.BaseTaskDto.TaskTypeKey">
+            <summary>
+            任务类别key
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.BaseTaskDto.TypeLevelKey">
+            <summary>
+            类别等级key
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.BaseTaskDto.LevelKey">
+            <summary>
+            级别等级key
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.BaseTaskDto.AirplaneTypeKey">
+            <summary>
+            适用机型key
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.BaseTaskDto.ClassHour">
+            <summary>
+            课时
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.BaseTaskDto.CreatorId">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.BaseTaskDto.CreatorName">
+            <summary>
+            创建人名
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.BaseTaskDto.TaskTypeValue">
+            <summary>
+            任务类别value
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.BaseTaskDto.TypeLevelValue">
+            <summary>
+            类别等级value
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.BaseTaskDto.LevelValue">
+            <summary>
+            级别等级value
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.BaseTaskDto.AirplaneTypeValue">
+            <summary>
+            适用机型value
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.BaseTaskDto.TagDisplay">
+            <summary>
+            标签显示
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.TaskNewDto.OriginalId">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:PracticeBus.ViewModel.Task.TaskQueryDto.Id">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

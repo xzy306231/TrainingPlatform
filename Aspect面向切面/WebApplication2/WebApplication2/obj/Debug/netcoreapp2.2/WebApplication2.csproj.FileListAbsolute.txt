@@ -1,0 +1,28 @@
+C:\Users\Administrator\Desktop\Aspect\WebApplication2\WebApplication2\bin\Debug\netcoreapp2.2\WebApplication2.deps.json
+C:\Users\Administrator\Desktop\Aspect\WebApplication2\WebApplication2\bin\Debug\netcoreapp2.2\WebApplication2.runtimeconfig.json
+C:\Users\Administrator\Desktop\Aspect\WebApplication2\WebApplication2\bin\Debug\netcoreapp2.2\WebApplication2.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\Aspect\WebApplication2\WebApplication2\bin\Debug\netcoreapp2.2\WebApplication2.dll
+C:\Users\Administrator\Desktop\Aspect\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.2\WebApplication2.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Aspect\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.2\WebApplication2.RazorAssemblyInfo.cache
+C:\Users\Administrator\Desktop\Aspect\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.2\WebApplication2.RazorAssemblyInfo.cs
+C:\Users\Administrator\Desktop\Aspect\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.2\WebApplication2.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Aspect\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.2\WebApplication2.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Aspect\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.2\WebApplication2.RazorTargetAssemblyInfo.cache
+C:\Users\Administrator\Desktop\Aspect\WebApplication2\WebApplication2\bin\Debug\netcoreapp2.2\WebApplication2.pdb
+C:\Users\Administrator\Desktop\Aspect\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.2\WebApplication2.dll
+C:\Users\Administrator\Desktop\Aspect\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.2\WebApplication2.pdb
+C:\Users\Administrator\Desktop\Aspect\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.2\WebApplication2.csprojAssemblyReference.cache
+F:\.Net Web API\Aspect面向切面\WebApplication2\WebApplication2\bin\Debug\netcoreapp2.2\WebApplication2.deps.json
+F:\.Net Web API\Aspect面向切面\WebApplication2\WebApplication2\bin\Debug\netcoreapp2.2\WebApplication2.runtimeconfig.json
+F:\.Net Web API\Aspect面向切面\WebApplication2\WebApplication2\bin\Debug\netcoreapp2.2\WebApplication2.runtimeconfig.dev.json
+F:\.Net Web API\Aspect面向切面\WebApplication2\WebApplication2\bin\Debug\netcoreapp2.2\WebApplication2.dll
+F:\.Net Web API\Aspect面向切面\WebApplication2\WebApplication2\bin\Debug\netcoreapp2.2\WebApplication2.pdb
+F:\.Net Web API\Aspect面向切面\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.2\WebApplication2.csprojAssemblyReference.cache
+F:\.Net Web API\Aspect面向切面\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.2\WebApplication2.csproj.CoreCompileInputs.cache
+F:\.Net Web API\Aspect面向切面\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.2\WebApplication2.RazorAssemblyInfo.cache
+F:\.Net Web API\Aspect面向切面\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.2\WebApplication2.RazorAssemblyInfo.cs
+F:\.Net Web API\Aspect面向切面\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.2\WebApplication2.AssemblyInfoInputs.cache
+F:\.Net Web API\Aspect面向切面\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.2\WebApplication2.AssemblyInfo.cs
+F:\.Net Web API\Aspect面向切面\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.2\WebApplication2.RazorTargetAssemblyInfo.cache
+F:\.Net Web API\Aspect面向切面\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.2\WebApplication2.dll
+F:\.Net Web API\Aspect面向切面\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.2\WebApplication2.pdb

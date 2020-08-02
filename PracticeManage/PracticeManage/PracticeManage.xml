@@ -1,0 +1,602 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PracticeManage</name>
+    </assembly>
+    <members>
+        <member name="T:PracticeManage.Controllers.SubjectManageController">
+            <summary>
+            训练科目服务
+            </summary>
+        </member>
+        <member name="M:PracticeManage.Controllers.SubjectManageController.AllSubject(System.String,System.String,System.Int64,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            训练科目一览
+            </summary>
+            <param name="planeType">机型</param>
+            <param name="keyword">关键字</param>
+            <param name="tagId">知识点id</param>
+            <param name="page">页码</param>
+            <param name="perPage">每页条目数</param>
+            <param name="sortBy">排序字段</param>
+            <param name="order">排序</param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeManage.Controllers.SubjectManageController.SingleSubject(System.Int64)">
+            <summary>
+            获取单个训练科目
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeManage.Controllers.SubjectManageController.NewSubject(PracticeManage.ViewModel.Subject.SubjectCreateDto)">
+            <summary>
+            新建训练科目
+            </summary>
+            <param name="newSubject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeManage.Controllers.SubjectManageController.EditSubject(PracticeManage.ViewModel.Subject.SubjectEditDto)">
+            <summary>
+            修改训练科目
+            </summary>
+            <param name="updateSubject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeManage.Controllers.SubjectManageController.RemoveSubject(System.Int64,System.String)">
+            <summary>
+            删除训练科目
+            </summary>
+            <param name="id"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PracticeManage.Controllers.TaskManageController">
+            <summary>
+            训练任务服务
+            </summary>
+        </member>
+        <member name="M:PracticeManage.Controllers.TaskManageController.AllTask(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            训练任务一览
+            </summary>
+            <param name="taskTypeKey">任务类型</param>
+            <param name="typeLevelKey">类别等级</param>
+            <param name="levelKey">级别等级</param>
+            <param name="keyword">关键字</param>
+            <param name="tagId">知识点id</param>
+            <param name="page">当前页</param>
+            <param name="perPage">每页行</param>
+            <param name="sortBy">createtime/hour</param>
+            <param name="order">asc/desc</param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeManage.Controllers.TaskManageController.MultipleDetails(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            获取多个训练任务的详细信息
+            </summary>
+            <param name="idList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeManage.Controllers.TaskManageController.CreateTask(PracticeManage.ViewModel.Task.TaskNewDto)">
+            <summary>
+            创建训练任务
+            </summary>
+            <param name="taskInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeManage.Controllers.TaskManageController.EditTaskTest(PracticeManage.ViewModel.Task.TaskUpdateDto)">
+            <summary>
+            编辑训练任务
+            </summary>
+            <param name="taskInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeManage.Controllers.TaskManageController.DeleteSingleTask(System.Int64,System.String)">
+            <summary>
+            删除一个训练任务
+            </summary>
+            <param name="id"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PracticeManage.Controllers.TaskManageController.DeleteMultiTasks(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            删除多个训练任务
+            </summary>
+            <param name="idList"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PracticeManage.Entity.BaseEntity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.BaseEntity.DeleteFlag">
+            <summary>
+            逻辑删除
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.BaseEntity.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.BaseEntity.ModifiedTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.BaseSubjectEntity.Id">
+            <summary>
+            自增主键
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.BaseSubjectEntity.Number">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.BaseSubjectEntity.Name">
+            <summary>
+            训练科目名称
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.BaseSubjectEntity.Desc">
+            <summary>
+            训练科目描述
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.BaseSubjectEntity.ClassifyKey">
+            <summary>
+            训练分类
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.BaseSubjectEntity.ClassifyValue">
+            <summary>
+            训练分类
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.BaseSubjectEntity.PlaneTypeKey">
+            <summary>
+            机型key
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.BaseSubjectEntity.PlaneTypeValue">
+            <summary>
+            机型value
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.BaseSubjectEntity.ExpectResult">
+            <summary>
+            期望结果
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.BaseSubjectEntity.CreatorName">
+            <summary>
+            创建人名
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.BaseSubjectEntity.CreatorId">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.BaseSubjectEntity.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.BaseSubjectEntity.TagDisplay">
+            <summary>
+            知识点展示
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.SubjectBusEntity.OriginalId">
+            <summary>
+            原始表id
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.SubjectBusEntity.TaskId">
+            <summary>
+            任务id
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.SubjectBusEntity.Task">
+            <summary>
+            任务关联对象
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.SubjectBusEntity.Tags">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.SubjectBusTagRefEntity.SubjectBusEntity_id">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.SubjectBusTagRefEntity.TagEntity_id">
+            <summary>
+            知识点id
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.SubjectTagRefEntity.SubjectEntity_id">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.SubjectTagRefEntity.TagEntity_id">
+            <summary>
+            知识点id
+            </summary>
+        </member>
+        <member name="T:PracticeManage.Entity.Tag">
+            <summary>
+            知识点表
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.Tag.Id">
+            <summary>
+            自增主键
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.Tag.OriginalId">
+            <summary>
+            知识点原始id
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.Tag.TagName">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.Tag.SubjectBuses">
+            <summary>
+            科目业务表关联
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.Tag.Subjects">
+            <summary>
+            科目资源表关联
+            </summary>
+        </member>
+        <member name="T:PracticeManage.Entity.TagEntity">
+            <summary>
+            知识点表
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TagEntity.Id">
+            <summary>
+            自增主键
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TagEntity.OriginalId">
+            <summary>
+            知识点原始id
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TagEntity.TagName">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TagEntity.SubjectBuses">
+            <summary>
+            科目业务表关联
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TagEntity.Subjects">
+            <summary>
+            科目资源表关联
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TaskEntity.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TaskEntity.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TaskEntity.TaskDesc">
+            <summary>
+            任务描述
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TaskEntity.TaskTypeKey">
+            <summary>
+            任务类别key
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TaskEntity.TaskTypeValue">
+            <summary>
+            任务类别value
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TaskEntity.TypeLevelKey">
+            <summary>
+            类别等级key
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TaskEntity.TypeLevelValue">
+            <summary>
+            类别等级value
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TaskEntity.LevelKey">
+            <summary>
+            级别等级key
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TaskEntity.LevelValue">
+            <summary>
+            级别等级value
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TaskEntity.AirplaneTypeKey">
+            <summary>
+            适用机型key
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TaskEntity.AirplaneTypeValue">
+            <summary>
+            适用机型value
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TaskEntity.ClassHour">
+            <summary>
+            课时
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TaskEntity.CreatorId">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TaskEntity.CreatorName">
+            <summary>
+            创建人名
+            </summary>
+        </member>
+        <member name="P:PracticeManage.Entity.TaskEntity.TagDisplay">
+            <summary>
+            标签显示
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.BaseSubjectDto.Number">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.BaseSubjectDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.BaseSubjectDto.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.BaseSubjectDto.ClassifyKey">
+            <summary>
+            分类key
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.BaseSubjectDto.ClassifyValue">
+            <summary>
+            分类value
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.BaseSubjectDto.PlaneTypeKey">
+            <summary>
+            适用机型key
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.BaseSubjectDto.PlaneTypeValue">
+            <summary>
+            适用机型value
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.BaseSubjectDto.ExpectResult">
+            <summary>
+            预期结果
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.SubjectBusNewDto.OriginalId">
+            <summary>
+            原始表id
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.SubjectBusNewDto.TaskId">
+            <summary>
+            任务id
+            todo
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.SubjectBusNewDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.SubjectBusNewDto.TagDisplay">
+            <summary>
+            标签展示
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.SubjectBusNewDto.CreatorId">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.SubjectBusNewDto.CreatorName">
+            <summary>
+            创建人名
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.SubjectCreateDto.CreatorId">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.SubjectCreateDto.CreatorName">
+            <summary>
+            创建人名
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.SubjectEditDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.SubjectFullDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.SubjectFullDto.TagDisplay">
+            <summary>
+            标签展示
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.SubjectFullDto.CreatorId">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.SubjectFullDto.CreatorName">
+            <summary>
+            创建人名
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.SubjectQueryDto.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.SubjectQueryDto.CreatorId">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.SubjectQueryDto.CreatorName">
+            <summary>
+            创建人名
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Subject.SubjectQueryDto.TagDisplay">
+            <summary>
+            标签展示
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.TagDto.OriginalId">
+            <summary>
+            知识点原始id
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.TagDto.TagName">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.BaseTaskDto.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.BaseTaskDto.TaskDesc">
+            <summary>
+            任务描述
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.BaseTaskDto.TaskTypeKey">
+            <summary>
+            任务类别key
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.BaseTaskDto.TypeLevelKey">
+            <summary>
+            类别等级key
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.BaseTaskDto.LevelKey">
+            <summary>
+            级别等级key
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.BaseTaskDto.AirplaneTypeKey">
+            <summary>
+            适用机型key
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.BaseTaskDto.ClassHour">
+            <summary>
+            课时
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.BaseTaskDto.CreatorId">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.BaseTaskDto.CreatorName">
+            <summary>
+            创建人名
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.BaseTaskDto.TaskTypeValue">
+            <summary>
+            任务类别value
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.BaseTaskDto.TypeLevelValue">
+            <summary>
+            类别等级value
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.BaseTaskDto.LevelValue">
+            <summary>
+            级别等级value
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.BaseTaskDto.AirplaneTypeValue">
+            <summary>
+            适用机型value
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.TaskFullDto.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.TaskFullDto.TagDisplay">
+            <summary>
+            标签显示
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.TaskQueryDto.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.TaskQueryDto.TagDisplay">
+            <summary>
+            标签显示
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.TaskQueryDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:PracticeManage.ViewModel.Task.TaskUpdateDto.Id">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Course.API</name>
+    </assembly>
+    <members>
+        <member name="T:Course.API.Controllers.CourseApprovalController">
+            <summary>
+            课程审核
+            </summary>
+        </member>
+        <member name="M:Course.API.Controllers.CourseApprovalController.CourseApprovalByID(Course.BLL.Approval)">
+            <summary>
+            课程审核
+            </summary>
+            <param name="approval"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseApprovalController.GetCourseAboutApprovaled(Course.BLL.Query)">
+            <summary>
+            已审核
+            </summary>
+            <param name="queryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseApprovalController.GetCourseAboutNotApprovaled(Course.BLL.Query)">
+            <summary>
+            未审核
+            </summary>
+            <param name="queryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseApprovalController.Update_CourseApprovalBatch(Course.BLL.ApprovalResult)">
+            <summary>
+            批量审核
+            </summary>
+            <param name="approvalResult">审核结果</param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseApprovalController.GetApprovalCourse(Course.BLL.QueryCriteria)">
+            <summary>
+            获取审核通过的课程
+            </summary>
+            <param name="queryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Course.API.Controllers.CourseController">
+            <summary>
+            课程管理
+            </summary>
+        </member>
+        <member name="M:Course.API.Controllers.CourseController.GetCourseInfo(Course.BLL.QueryCriteria)">
+            <summary>
+            获取课程信息
+            </summary>
+            <param name="queryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseController.GetCourseInfoByID(System.Int64)">
+            <summary>
+            根据ID获取课程信息
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseController.CreateCourse(Course.BLL.CourseTag)">
+            <summary>
+            创建课程
+            </summary>
+            <param name="coursetag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseController.UpdateCourse(Course.BLL.CourseTag)">
+            <summary>
+            修改课程
+            </summary>
+            <param name="course">课程对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseController.CoursePublish(System.Int32)">
+            <summary>
+            课程发布
+            </summary>
+            <param name="courseid">课程ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseController.PublishBatchCourse(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            课程批量发布
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseController.RemoveCourse(System.Int64,System.String)">
+            <summary>
+            删除课程
+            </summary>
+            <param name="id"></param>
+            <param name="strUserNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseController.Delete_BatchCourse(Course.BLL.CourseList)">
+            <summary>
+            批量删除课程
+            </summary>
+            <param name="courseListID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseController.SetBatchCourseBatchTag(Course.BLL.BatchCourseTag)">
+            <summary>
+            批量设置课程知识点
+            </summary>
+            <param name="batchCourseTag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseController.GetCourseStruct(System.Int64)">
+            <summary>
+            获取课程结构
+            </summary>
+            <param name="courseid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseController.ViewCoursewareByStructNodeID(System.Int64)">
+            <summary>
+            根据课程结构ID查看相应的资源信息
+            </summary>
+            <param name="NodeID">结构ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseController.CreateCourseStructNode(Course.BLL.CourseStructNode)">
+            <summary>
+            创建课程结构节点
+            </summary>
+            <param name="CourseStruct">课程结构对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseController.UpdateCourseStructNode(System.Int32,System.String,System.Int64)">
+            <summary>
+            修改课程结构节点
+            </summary>
+            <param name="id">ID</param>
+            <param name="NodeName">节点名称</param>
+            <param name="UpdateBy">修改人ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseController.RemoveCourseStructNode(System.Int32)">
+            <summary>
+            删除课程结构
+            </summary>
+            <param name="CourseStructID">结构ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseController.CreateCourseStructResource(Course.BLL.StructResource)">
+            <summary>
+            创建结构资源
+            </summary>
+            <param name="StructReaource">结构资源</param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.CourseController.Delete_StructResource(System.Int64,System.Int64)">
+            <summary>
+            删除结构资源
+            </summary>
+            <param name="StructID">结构ID</param>
+            <param name="ResourceID">资源ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:Course.API.Controllers.RemoteServiceController">
+            <summary>
+            远程服务
+            </summary>
+        </member>
+        <member name="T:Course.API.Controllers.TrainingProgramController">
+            <summary>
+            培训大纲控制器
+            </summary>
+        </member>
+        <member name="M:Course.API.Controllers.TrainingProgramController.#ctor(IHttpClientHelper,Course.BLL.TrainingProgram,pf_course_manage_v1Context,RabbitMQClient)">
+            <summary>
+            培训大纲
+            </summary>
+            <param name="client"></param>
+        </member>
+        <member name="M:Course.API.Controllers.TrainingProgramController.GetTrainingProgram(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取培训大纲
+            </summary>
+            <param name="planeType">机型</param>
+            <param name="TrainType">训练类别</param>
+            <param name="TrainName">名称</param>
+            <param name="PageIndex">训练类别</param>
+            <param name="PageSize">名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.TrainingProgramController.GetTrainingProgramByID(System.Int64)">
+            <summary>
+            根据ID获取某一个培训大纲
+            </summary>
+            <param name="TrainingProgramID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.TrainingProgramController.Delete_TrainingProgram(System.Int64)">
+            <summary>
+            删除培训大纲
+            </summary>
+            <param name="TrainingProgramID">培训大纲ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.TrainingProgramController.Update_TrainingProgram(Course.BLL.TrainingProgramModel)">
+            <summary>
+            修改训练大纲
+            </summary>
+            <param name="objModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Course.API.Controllers.TrainingProgramController.Add_TrainingProgram(Course.BLL.TrainingProgramModel)">
+            <summary>
+            创建训练大纲
+            </summary>
+            <param name="objModel"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

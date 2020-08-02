@@ -1,0 +1,14 @@
+{
+  "ConnectionStrings": {
+    "conn": "server=192.168.1.149;userid=root;pwd=root;port=3306;database=pf_datastatistic;sslmode=none;"
+  },
+  "UserName": "guest",
+  "Password": "guest",
+  "HostName": "192.168.1.171",
+  "Port": "5673",
+  "Exchange": "topic_exchange",
+  "RoutingKey1": "topic.logmsg",
+  "RoutingKey2": "topic.todomsg",
+  "RoutingKey3": "topic.msg",
+  "DicUrl": "http://puxuplus-admin-service/adminv1/dic/getDicTypeList?dicType="
+}

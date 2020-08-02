@@ -1,0 +1,431 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Examination.API</name>
+    </assembly>
+    <members>
+        <member name="T:Examination.API.Controllers.CorrectExamPaperController">
+            <summary>
+            阅卷管理
+            </summary>
+        </member>
+        <member name="M:Examination.API.Controllers.CorrectExamPaperController.GetCorrectExamPaper(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取阅卷信息
+            </summary>
+            <param name="UserNumber"></param>
+            <param name="strStatus"></param>
+            <param name="StartTime"></param>
+            <param name="EndTime"></param>
+            <param name="KeyWord"></param>
+            <param name="PageIndex"></param>
+            <param name="PageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.CorrectExamPaperController.GetExamStudent(System.Int64)">
+            <summary>
+            获取参考学员
+            </summary>
+            <param name="examid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.CorrectExamPaperController.CorrectQuestion(System.Int64,System.Int64,System.Int32)">
+            <summary>
+            评分
+            </summary>
+            <param name="RecordID"></param>
+            <param name="ItemID"></param>
+            <param name="Score"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.CorrectExamPaperController.CorrectSubmitTestPaper(System.Int64)">
+            <summary>
+            提交结果
+            </summary>
+            <param name="ExamID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.CorrectExamPaperController.CorrectTaskSubject(System.Int64,System.Int64,System.Int64,System.String,System.String)">
+            <summary>
+            训练任务科目-提交考试结果
+            </summary>
+            <param name="RecordID">记录ID</param>
+            <param name="TaskID">任务ID</param>
+            <param name="SubjectID"></param>
+            <param name="strResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.CorrectExamPaperController.CorrectTask(System.Int64,System.String,System.String,System.String,System.String)">
+            <summary>
+            考试训练任务结果提交
+            </summary>
+            <param name="RecordID"></param>
+            <param name="UserNumber"></param>
+            <param name="TaskComment"></param>
+            <param name="Result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.CorrectExamPaperController.GetTaskSubjectInfo(System.Int64,System.String)">
+            <summary>
+            获取实践考试作答界面
+            </summary>
+            <param name="examid"></param>
+            <param name="UserNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.CorrectExamPaperController.UpdateStuCorrectStatus(System.Int64,System.String)">
+            <summary>
+            更新阅卷状态
+            </summary>
+            <param name="examid"></param>
+            <param name="UserNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Examination.API.Controllers.EffectEvaluationController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Examination.API.Controllers.EffectEvaluationController.GetPersonalExamReportResult(System.String,System.Int64)">
+            <summary>
+            个人考试报告
+            </summary>
+            <param name="userNumber"></param>
+            <param name="planId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.EffectEvaluationController.GetPlanExamReportResult(System.Int64)">
+            <summary>
+            培训计划考试报告
+            </summary>
+            <param name="planId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.ExaminationManageController.GetExamination(System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取考试安排数据
+            </summary>
+            <param name="strStatus">状态</param>
+            <param name="startTime">开始时间</param>
+            <param name="endTime">结束时间</param>
+            <param name="strKeyWord">关键字</param>
+            <param name="PageIndex">页码</param>
+            <param name="PageSize">记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.ExaminationManageController.GetExaminationStatistic(System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="strStatus"></param>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <param name="strKeyWord"></param>
+            <param name="PageIndex"></param>
+            <param name="PageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.ExaminationManageController.GetExaminationToPlan(System.String,System.String,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            将考试添加到培训计划
+            </summary>
+            <param name="KeyWord">搜索关键字</param>
+            <param name="FieldName">排序字段</param>
+            <param name="IsAsc">升序</param>
+            <param name="PageIndex">页码</param>
+            <param name="PageSize">记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.ExaminationManageController.UpdateExaminationStatus(System.Collections.Generic.List{Examination.BLL.ExaminationID})">
+            <summary>
+             更新考试复用状态
+            </summary>
+            <param name="examinations"></param>
+            <param name="StartTime"></param>
+            <param name="EndTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.ExaminationManageController.GetStuExamStatus(System.Int64,System.String)">
+            <summary>
+            查看学生考试作答状态
+            </summary>
+            <param name="examId"></param>
+            <param name="userNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.ExaminationManageController.GetTheoryExaminationStatus(System.Int64,System.String,System.String,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            获取理论考试监控信息
+            </summary>
+            <param name="examinationid"></param>
+            <param name="strExamStatus"></param>
+            <param name="FieldName"></param>
+            <param name="IsAsc"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.ExaminationManageController.GetTheoryExaminationByID(System.Int64)">
+            <summary>
+            根据ID获取理论考试信息
+            </summary>
+            <param name="examid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.ExaminationManageController.Add_TheoryExamination(Examination.BLL.Examinations)">
+            <summary>
+            创建理论考试安排
+            </summary>
+            <param name="examination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.ExaminationManageController.Update_TheoryExamination(Examination.BLL.Examinations)">
+            <summary>        
+            修改理论考试
+            </summary>
+            <param name="examination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.ExaminationManageController.GetTaskExaminationStatus(System.Int64,System.String,System.String,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            获取实践考试监控信息
+            </summary>
+            <param name="ID"></param>
+            <param name="strExamStatus"></param>
+            <param name="FieldName"></param>
+            <param name="IsAsc"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.ExaminationManageController.GetTaskExaminationByID(System.Int64)">
+            <summary>
+            根据ID获取考试管理-实践考试信息
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.ExaminationManageController.Add_TaskExamination(Examination.BLL.TaskExamination)">
+            <summary>
+            添加实践考试
+            </summary>
+            <param name="taskExamination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.ExaminationManageController.Update_TaskExamination(Examination.BLL.TaskExamination)">
+            <summary>
+            修改实践考试
+            </summary>
+            <param name="taskExamination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.ExaminationManageController.Quit_Examination(System.Int64)">
+            <summary>
+            中止考试
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.ExaminationManageController.Delete_Examination(System.Int64)">
+            <summary>
+            删除考试安排
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Examination.API.Controllers.MyExaminationController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Examination.API.Controllers.MyExaminationController.GetMyExamination(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取我的考试列表信息
+            </summary>
+            <param name="keyWord">搜索关键字</param>
+            <param name="strStatus">状态</param>
+            <param name="StartTime">开始时间</param>
+            <param name="EndTime">结束时间</param>
+            <param name="UserNumber">用户账号</param>
+            <param name="PageIndex">页码</param>
+            <param name="PageSize">记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.MyExaminationController.GetTheoryExamAndPaperInfoByExamID(System.Int64)">
+            <summary>
+            开始考试界面信息
+            </summary>
+            <param name="examid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.MyExaminationController.StartExamination(System.Int64,System.String)">
+            <summary>
+            开始考试
+            </summary>
+            <param name="examinationid">考试管理ID</param>
+            <param name="usernumber">账号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.MyExaminationController.ContinueExamination(System.Int64,System.String)">
+            <summary>
+            继续考试
+            </summary>
+            <param name="examinationid"></param>
+            <param name="usernumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.MyExaminationController.GetTaskExamResultInfo(System.Int64,System.String)">
+            <summary>
+            查看实践考试结果
+            </summary>
+            <param name="ExamID"></param>
+            <param name="UserNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.MyExaminationController.GetStudentExamPaper(System.Int64,System.String)">
+            <summary>
+            获取学员试卷
+            </summary>
+            <param name="ExamID"></param>
+            <param name="UserNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.MyExaminationController.GetStuTheoryExamPaperResult(System.Int64,System.String)">
+            <summary>
+            获取学员作答查看界面信息
+            </summary>
+            <param name="ExamID"></param>
+            <param name="UserNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.MyExaminationController.StuSubmitExamPaper(AnswerLogList)">
+            <summary>
+            学员提交试卷
+            </summary>
+            <param name="answerLogList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.MyExaminationController.StuAnswerQuestion(System.Int64,System.Int64,System.String)">
+            <summary>
+            学员作答
+            </summary>
+            <param name="RecordID"></param>
+            <param name="ItemID"></param>
+            <param name="AnswerResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.MyExaminationController.SubmitStudentTestPaper(System.Int64)">
+            <summary>
+            学员提交试卷
+            </summary>
+            <param name="RecordID">记录ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:Examination.API.Controllers.RemoteServiceController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Examination.API.Controllers.RemoteServiceController.AddStuFromRemoteService(ExamUserModel)">
+            <summary>
+            从远程服务添加学员
+            </summary>
+            <param name="examUserModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.RemoteServiceController.DeleteStuFromRemoteService(ExamUserModel)">
+            <summary>
+            
+            </summary>
+            <param name="examUserModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.RemoteServiceController.DeleteStuPlanIDExamID(ExamUserModel)">
+            <summary>
+            
+            </summary>
+            <param name="examUserModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.RemoteServiceController.RecoverExamination(ExamUserModel)">
+            <summary>
+            恢复考试管理
+            </summary>
+            <param name="examUserModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.RemoteServiceController.PublishExamination(System.Collections.Generic.List{Examination.BLL.ExaminationInfo})">
+            <summary>
+            发布考试
+            </summary>
+            <param name="examination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.RemoteServiceController.UpdateExaminationTime(System.Collections.Generic.List{Examination.BLL.ExaminationInfo})">
+            <summary>
+            更新考试的起始与结束时间
+            </summary>
+            <param name="examinations"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.RemoteServiceController.ForceSubmitExamination(System.Int64)">
+            <summary>
+            强制提交试卷
+            </summary>
+            <param name="examId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.RemoteServiceController.GetStuExamResult(System.Int64,System.String)">
+            <summary>
+            查看考试是否通过
+            </summary>
+            <param name="examId"></param>
+            <param name="userNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.RemoteServiceController.QuitExamination(ExamUserModel)">
+            <summary>
+            提前中止考试
+            </summary>
+            <param name="examUserModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.RemoteServiceController.GetPlanExamProgress(System.Int64)">
+            <summary>
+            获取培训计划下的考试进度
+            </summary>
+            <param name="planId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.StatisticDataController.GetExamSubmitRate">
+            <summary>
+            考试提交率分析
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.StatisticDataController.GetSubjectCorrectRate">
+            <summary>
+            科目分析
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.StatisticDataController.GetTheoryExamCorrectRateRank">
+            <summary>
+            获取理论考试正确率排名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.StatisticDataController.GetTaskPassRateRank">
+            <summary>
+            获取实践考试通过率排名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examination.API.Controllers.StatisticDataController.GetExamKnowledge">
+            <summary>
+            获取理论考试知识点掌握度
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

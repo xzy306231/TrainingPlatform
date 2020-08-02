@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KnowledgeTag.API</name>
+    </assembly>
+    <members>
+        <member name="M:KnowledgeTag.API.Controllers.knowledgeTagController.GetTagTree(System.String)">
+            <summary>
+            获取知识体系
+            </summary>
+            <param name="TagName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KnowledgeTag.API.Controllers.knowledgeTagController.ImportExcel(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Excel导入
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:KnowledgeTag.API.Controllers.knowledgeTagController.AddParentTag(System.String,System.Int32,System.Int32)">
+            <summary>
+            添加根节点
+            </summary>
+            <param name="TagName">节点名称</param>
+            <param name="CreateID">创建人</param>
+             <param name="index">索引值</param>
+        </member>
+        <member name="M:KnowledgeTag.API.Controllers.knowledgeTagController.TreeNodeSort(System.Int64,System.Int64)">
+            <summary>
+            节点拖动
+            </summary>
+            <param name="CurrentID">当前拖动的节点</param>
+            <param name="DestinationID">目的地父节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:KnowledgeTag.API.Controllers.knowledgeTagController.AddNodeTag(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            添加子节点
+            </summary>
+            <param name="TagName">节点名</param>
+            <param name="ParentID">父节点ID</param>
+            <param name="CreateID">创建人ID</param>
+            <param name="index">索引</param>
+        </member>
+        <member name="M:KnowledgeTag.API.Controllers.knowledgeTagController.TreeSort(KnowledgeTag.BLL.TagList)">
+            <summary>
+            树状图排序
+            </summary>
+            <param name="tagList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KnowledgeTag.API.Controllers.knowledgeTagController.EditNodeTag(System.String,System.Int32,System.Int32)">
+            <summary>
+            编辑节点
+            </summary>
+            <param name="TagName">节点名</param>
+            <param name="NodeID">节点ID</param>
+            <param name="UpdateBy">修改人ID</param>
+        </member>
+        <member name="M:KnowledgeTag.API.Controllers.knowledgeTagController.RemoveTag(System.Int32)">
+            <summary>
+            删除节点
+            </summary>
+            <param name="ID">删除的节点ID</param>
+        </member>
+    </members>
+</doc>

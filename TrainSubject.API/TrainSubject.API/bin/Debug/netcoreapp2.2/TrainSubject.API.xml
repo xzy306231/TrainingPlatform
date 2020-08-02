@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TrainSubject.API</name>
+    </assembly>
+    <members>
+        <member name="T:TrainSubject.API.Controllers.TrainSubjectController">
+            <summary>
+            训练科目
+            </summary>
+        </member>
+        <member name="M:TrainSubject.API.Controllers.TrainSubjectController.GetTrainSubject(TrainSubject.BLL.QueryCriteria)">
+            <summary>
+            获取训练科目
+            </summary>
+            <param name="queryCriteria">查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainSubject.API.Controllers.TrainSubjectController.CreateTrainSubject(TrainSubject.BLL.TrainSubjectModel)">
+            <summary>
+            创建训练科目
+            </summary>
+            <param name="model">训练科目对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainSubject.API.Controllers.TrainSubjectController.TrainSubjectExcelImport(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Excel导入
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainSubject.API.Controllers.TrainSubjectController.UpdateTrainSubject(TrainSubject.BLL.TrainSubjectModel)">
+            <summary>
+            修改训练科目
+            </summary>
+            <param name="id">ID</param>
+            <param name="model">修改的训练科目对象</param>
+            <returns>True:成功，False失败</returns>
+        </member>
+        <member name="M:TrainSubject.API.Controllers.TrainSubjectController.RemoveTrainSubject(System.Int32)">
+            <summary>
+            删除训练科目
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainSubject.API.Controllers.TrainSubjectController.TrainSubjectExcelExport">
+            <summary>
+            Excel导出
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TrainSubject.API.IHttpClientHelper">
+            <summary>
+            接口
+            </summary>
+        </member>
+        <member name="M:TrainSubject.API.IHttpClientHelper.GetTokenJson(System.String)">
+            <summary>
+            获取Token中的Json数据
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainSubject.API.HttpClientHelper.#ctor(Steeltoe.Common.Discovery.IDiscoveryClient)">
+            <summary>
+            客户端发现
+            </summary>
+            <param name="client"></param>
+        </member>
+        <member name="M:TrainSubject.API.HttpClientHelper.GetTokenJson(System.String)">
+            <summary>
+            获取Token中的Json数据
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

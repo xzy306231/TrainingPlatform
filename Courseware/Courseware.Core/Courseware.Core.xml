@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Courseware.Core</name>
+    </assembly>
+    <members>
+        <member name="P:Courseware.Core.Entities.BaseEntity.DeleteFlag">
+            <summary>
+            逻辑删除
+            状态0-正常，1-逻辑删除
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.BaseEntity.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.BaseEntity.ModifiedTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:Courseware.Core.Entities.KnowledgeTagEntity">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.KnowledgeTagEntity.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.KnowledgeTagEntity.OriginalId">
+            <summary>
+            原始表中标签id
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.KnowledgeTagEntity.TagName">
+            <summary>
+            标签名
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.KnowledgeTagEntity.ResourceTags">
+            <summary>
+            资源关联表
+            </summary>
+        </member>
+        <member name="T:Courseware.Core.Entities.ResourceEntity">
+            <summary>
+            资源
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.CreatorId">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.CreatorName">
+            <summary>
+            创建人名
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.ResourceName">
+            <summary>
+            资源名称
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.ResourceDesc">
+            <summary>
+            资源描述
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.ResourceType">
+            <summary>
+            资源类型id
+            1是视频,2是flash,3是文档,4是图片,5是SCORM课件
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.ResourceDuration">
+            <summary>
+            资源时长
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.ResourceLevel">
+            <summary>
+            资源密级id
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.TransfType">
+            <summary>
+            文件转换状态
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.ThumbnailPath">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.MD5Code">
+            <summary>
+            MD5值
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.FileSuffix">
+            <summary>
+            文件后缀名
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.OriginalUrl">
+            <summary>
+            资源原始路径
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.TransformUrl">
+            <summary>
+            资源转换后的路径
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.FileSize">
+            <summary>
+            资源文件大小，单位bite
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.FileSizeDisplay">
+            <summary>
+            资源文件大小前端显示内容
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.GroupName">
+            <summary>
+            组名
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.TitleFromManifest">
+            <summary>
+            Manifest中的title
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.PathToIndex">
+            <summary>
+            SCORM课件主页的相对路径
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.ZipResourceUrl">
+            <summary>
+            课件压缩资源路径
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.SCORMVersion">
+            <summary>
+            SCORM版本
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.CheckerId">
+            <summary>
+            审核人id
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.CheckerName">
+            <summary>
+            审核人
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.CheckDate">
+            <summary>
+            审核时间
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.CheckRemark">
+            <summary>
+            审核备注
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.CheckStatus">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.ResourceTagsDisplay">
+            <summary>
+            知识点前端显示内容
+            </summary>
+        </member>
+        <member name="P:Courseware.Core.Entities.ResourceEntity.ResourceTags">
+            <summary>
+            标签关联表
+            </summary>
+        </member>
+        <member name="T:Courseware.Core.Entities.ResourceTagEntity">
+            <summary>
+            资源标签关联表
+            </summary>
+        </member>
+    </members>
+</doc>

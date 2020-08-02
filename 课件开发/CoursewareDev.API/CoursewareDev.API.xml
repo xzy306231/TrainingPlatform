@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CoursewareDev.API</name>
+    </assembly>
+    <members>
+        <member name="T:CoursewareDev.API.Controllers.CoursewareController">
+            <summary>
+            课件开发管理
+            </summary>
+        </member>
+        <member name="M:CoursewareDev.API.Controllers.CoursewareController.GetNotPublishCourseware(System.String,System.Int32,System.Int32)">
+            <summary>
+            获取课件开发信息(未发布)
+            </summary>
+            <param name="keyWord"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursewareDev.API.Controllers.CoursewareController.GetPublishedCourseware(System.String,System.Int32,System.Int32)">
+            <summary>
+            获取课件开发信息(已发布)
+            </summary>
+            <param name="keyWord"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursewareDev.API.Controllers.CoursewareController.PublishCourseware(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            发布课件
+            </summary>
+            <param name="idList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursewareDev.API.Controllers.CoursewareController.RemoveCourseware(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            删除课件
+            </summary>
+            <param name="idList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursewareDev.API.Controllers.CoursewareController.CreateCourseware(CoursewareDev.BLL.CoursewareInfo)">
+            <summary>
+            创建课件
+            </summary>
+            <param name="ware"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursewareDev.API.Controllers.CoursewareController.GetPageContent(System.Int64)">
+            <summary>
+            查看课件内容
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursewareDev.API.Controllers.CoursewareController.PreviewPageContent(System.Int64)">
+            <summary>
+            课件预览
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursewareDev.API.Controllers.CoursewareController.SaveCourseware(CoursewareDev.BLL.CoursewareInfo)">
+            <summary>
+            保存课件
+            </summary>
+            <param name="coursewareInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CoursewareDev.API.Controllers.RemoteServiceController">
+            <summary>
+            远程服务
+            </summary>
+        </member>
+    </members>
+</doc>

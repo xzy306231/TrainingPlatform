@@ -1,0 +1,35 @@
+{
+  "ConnectionStrings": {
+    "conn": "server=192.168.1.143;userid=root;pwd=root;port=3306;database=pf_course_manage;sslmode=none;"
+  },
+  "UserName": "guest",
+  "Password": "guest",
+  "HostName": "192.168.1.171",
+  "Port": "5673",
+  "Exchange": "topic_exchange",
+  "RoutingKey1": "topic.logmsg",
+  "RoutingKey2": "topic.todomsg",
+  "RoutingKey3": "topic.msg",
+  "FastDFSUrl": "http://192.168.1.171:8088/",
+  "TokenUrl": "http://puxuplus-admin-service/adminv1/token/getTokenInfo?token=",
+  "DicUrl": "http://puxuplus-admin-service/adminv1/dic/getDicTypeList?dicType=",
+  "GetStuUrl": "http://PEOPLEMANAGER-SERVICE/peoplemanager/v1/otherServer/filterShow/student",
+  "SaveStuUrl": "http://PEOPLEMANAGER-SERVICE/peoplemanager/v1/otherServer/selectPersons/student",
+  "TrainTaskUsers": "http://TASKMANAGE-SERVICE/taskManage/v1/updatePersonOfTask",
+  "AddExamUsers": "http://EXAMINATION-SERVICE/examination/v1/AddStuFromRemoteService",
+  "DeleteExamUsers": "http://EXAMINATION-SERVICE/examination/v1/DeleteStuFromRemoteService",
+  "DeleteExamUserByContentID": "http://EXAMINATION-SERVICE/examination/v1/DeleteStuPlanIDExamID",
+  "QuitQuestionnaire": "http://QUESTIONNAIRE-SERVICE/questionnaire/v1/QuitQuestionByPlanID",
+  "PublishExam": "http://EXAMINATION-SERVICE/examination/v1/PublishExamination",
+  "UpdateExamTime": "http://EXAMINATION-SERVICE/examination/v1/UpdateExaminationTime",
+  "RecoverExamination": "http://EXAMINATION-SERVICE/examination/v1/RecoverExamination",
+  "GetExamResult": "http://EXAMINATION-SERVICE/examination/v1/GetStuExamResult?",
+  "QuitPlan": "http://EXAMINATION-SERVICE/examination/v1/QuitExamination",
+  "ExamProgress": "http://EXAMINATION-SERVICE/examination/v1/GetPlanExamProgress?",
+  "GetPersonExamReport": "http://EXAMINATION-SERVICE/examination/v1/GetPersonalExamReportResult?",
+  "GetPersonTaskReport": "http://TASKMANAGE-SERVICE/taskManage/v1/PersonalReportInfo?",
+  "GetPlanExamReport": "http://EXAMINATION-SERVICE/examination/v1/GetPlanExamReportResult?",
+  "GetPlanTaskReport": "http://TASKMANAGE-SERVICE/taskManage/v1/CollectiveReportInfo?",
+  "EndComment": "http://DATASTATISTIC-SERVICE/statistic/v1/GetEndCommment?"
+
+}

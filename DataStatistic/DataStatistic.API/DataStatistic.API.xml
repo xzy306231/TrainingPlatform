@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataStatistic.API</name>
+    </assembly>
+    <members>
+        <member name="T:DataStatistic.API.Controllers.EffectEvaluationController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DataStatistic.API.Controllers.EffectEvaluationController.GetIndexContent(System.Int64)">
+            <summary>
+            获取指标内容
+            </summary>
+            <param name="planid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataStatistic.API.Controllers.EffectEvaluationController.SaveIndexStatus(System.Collections.Generic.List{DataStatistic.BLL.IndexContent})">
+            <summary>
+            指标状态变更
+            </summary>
+            <param name="indexContents"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataStatistic.API.Controllers.EffectEvaluationController.GetEndCommment(System.String,System.String)">
+            <summary>
+             获取结束语
+            </summary>
+            <param name="level"></param>
+            <param name="div"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DataStatistic.API.Controllers.ExamController">
+            <summary>
+            考试测评
+            </summary>
+        </member>
+        <member name="M:DataStatistic.API.Controllers.ExamController.GetExamCorrectRank">
+            <summary>
+            获取考试正确率排名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataStatistic.API.Controllers.ExamController.GetExamPassRate">
+            <summary>
+            获取考试通过率排名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataStatistic.API.Controllers.ExamController.GetExamKnowledge">
+            <summary>
+            获取考试知识点掌握度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DataStatistic.API.Controllers.HomePageController">
+            <summary>
+            个人中心
+            </summary>
+        </member>
+        <member name="M:DataStatistic.API.Controllers.HomePageController.GetStuStatisticData(System.String)">
+            <summary>
+            个人中心主页界面数据查询
+            </summary>
+            <param name="userNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DataStatistic.API.Controllers.TaskTrainingController">
+            <summary>
+            模拟训练
+            </summary>
+        </member>
+        <member name="M:DataStatistic.API.Controllers.TaskTrainingController.GetTaskRank">
+            <summary>
+            获取任务通过率排名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataStatistic.API.Controllers.TaskTrainingController.GetTaskKnowledge">
+            <summary>
+            获取任务的知识点掌握度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DataStatistic.API.Controllers.TheoryTeachingController">
+            <summary>
+            理论教学
+            </summary>
+        </member>
+        <member name="M:DataStatistic.API.Controllers.TheoryTeachingController.GetLearningTimeRank">
+            <summary>
+            获取学习时长排名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataStatistic.API.Controllers.TheoryTeachingController.GetTheoryKnowledge">
+            <summary>
+            获取理论知识点掌握度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DataStatistic.API.Controllers.TrainingStatisticController">
+            <summary>
+            系统总业务统计数据
+            </summary>
+        </member>
+        <member name="M:DataStatistic.API.Controllers.TrainingStatisticController.GetPFStatisticData">
+            <summary>
+            获取平台统计数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataStatistic.API.Controllers.TrainingStatisticController.GetTrainingTimesByYear(System.String)">
+            <summary>
+            获取每年中每月的培训次数
+            </summary>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataStatistic.API.Controllers.TrainingStatisticController.GetTrainingYearTimes">
+            <summary>
+            获取每年的培训次数
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

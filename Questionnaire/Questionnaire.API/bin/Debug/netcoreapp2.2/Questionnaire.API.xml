@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Questionnaire.API</name>
+    </assembly>
+    <members>
+        <member name="T:Questionnaire.API.Controllers.QuestionnaireController">
+            <summary>
+            教学互动
+            </summary>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.GetQuestionnaire(System.Int64,System.Int64,System.String)">
+            <summary>
+            获取所有问卷
+            </summary>
+            <param name="PlanID">计划ID</param>
+            <param name="CourseID">课程ID</param>
+            <param name="strQuestionTheme">问卷主题</param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.Update_QuestionnaireName(System.Int64,System.String)">
+            <summary>
+            修改问卷名称
+            </summary>
+            <param name="ID">问卷ID</param>
+            <param name="Name">问卷名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.PreviewQuestionnaire(System.Int64)">
+            <summary>
+            预览问卷
+            </summary>
+            <param name="QuestionnaireID">问卷ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.GetQuestionnaireResult(System.Int64)">
+            <summary>
+            获取问卷结果
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.CreateQuestionnaire(Questionnaire.BLL.QuestionnaireInfo)">
+            <summary>
+            创建问卷
+            </summary>
+            <param name="qt">问卷对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.CreateQuestionnaireItem(System.Int64,System.String,System.String,System.Int64)">
+            <summary>
+            创建题目
+            </summary>
+            <param name="QuestionnaireID">问卷ID</param>
+            <param name="TitleInfo">题干</param>
+            <param name="ItemType">试题类型</param>
+            <param name="CreateBy">创建人</param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.UpdateQuestionnaireItem(System.Int64,System.String,System.Int64)">
+            <summary>
+            修改题目
+            </summary>
+            <param name="ID">题目ID</param>
+            <param name="TitleInfo">题目信息</param>
+            <param name="UpdateBy">修改人</param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.RemoveQuestionnaireItem(System.Int64)">
+            <summary>
+            删除题目
+            </summary>
+            <param name="ItemID">题目ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.SetQuestionIsMustAnswer(System.Int64,System.Nullable{System.SByte})">
+            <summary>
+            设置问题是否必答
+            </summary>
+            <param name="id">ID</param>
+            <param name="result">结果</param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.SetAnswerQuestionCountMin(System.Int64,System.Nullable{System.Int32})">
+            <summary>
+            设置问题作答数量(最少)   
+            </summary>
+            <param name="id"></param>
+            <param name="minCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.SetAnswerQuestionCountMax(System.Int64,System.Nullable{System.Int32})">
+            <summary>
+            设置问题作答数量(最多)   
+            </summary>
+            <param name="id"></param>
+            <param name="maxCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.QuestionItemSort(System.Collections.Generic.List{Questionnaire.BLL.QuestionSort})">
+            <summary>
+            问卷内容排序
+            </summary>
+            <param name="questionSort"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.CreateQuestionnaireItemOption(System.Int64,System.String,System.Int64)">
+            <summary>
+            创建题目选项
+            </summary>
+            <param name="ItemID">题目ID</param>
+            <param name="OptionContent">选项内容</param>
+            <param name="CreateBy">创建人</param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.UpdateQuestionnaireItemOption(System.Int64,System.String,System.Int64)">
+            <summary>
+            修改题目选项
+            </summary>
+            <param name="ID">选项ID</param>
+            <param name="OptionContent">选项内容</param>
+            <param name="UpdateBy">修改人</param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.RemoveQuestionnaireItemOption(System.Int64)">
+            <summary>
+            删除题目选项
+            </summary>
+            <param name="ItemOptionID">题目选项ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.PublishQuestionnaire(System.Int64)">
+            <summary>
+            问卷发布
+            </summary>
+            <param name="QuestionnaireID">问卷ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.QuitQuestionnaire(System.Int64)">
+            <summary>
+            终止问卷
+            </summary>
+            <param name="id">问卷ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.QuitQuestionByPlanID(Questionnaire.BLL.Plan)">
+            <summary>
+            根据培训计划ID，中止问卷
+            </summary>
+            <param name="PlanID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireController.DeleteQuestionnaire(System.Int64)">
+            <summary>
+            删除问卷
+            </summary>
+            <param name="QuestionnaireID">问卷ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:Questionnaire.API.Controllers.QuestionnaireInteractController">
+            <summary>
+            教学互动
+            </summary>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireInteractController.GetQuestionnaireByCourseID(System.Int64,System.Int64,System.String,System.String,System.Int64,System.Int32,System.Int32)">
+            <summary>
+            获取教学互动状态信息
+            </summary>
+            <param name="PlanID">计划ID</param>
+            <param name="CourseID">课程ID</param>
+            <param name="strStatus">状态</param>
+            <param name="keyWord">状态</param>
+            <param name="UserID">用户ID</param>
+            <param name="PageIndex">页码</param>
+            <param name="PageSize">记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireInteractController.QuestionnaireInteractLog(Questionnaire.BLL.InteractionLogList)">
+            <summary>
+            问卷作答
+            </summary>
+            <param name="ModelList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.Controllers.QuestionnaireInteractController.GetQuestionnaireAnswerResult(System.Int64,System.Int64)">
+            <summary>
+            查看学员作答结果
+            </summary>
+            <param name="QuestionnaireID"></param>
+            <param name="UserID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Questionnaire.API.IHttpClientHelper">
+            <summary>
+            接口
+            </summary>
+        </member>
+        <member name="M:Questionnaire.API.IHttpClientHelper.GetTokenJson(System.String)">
+            <summary>
+            获取Token中的Json数据
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Questionnaire.API.HttpClientHelper.#ctor(Steeltoe.Common.Discovery.IDiscoveryClient)">
+            <summary>
+            客户端发现
+            </summary>
+            <param name="client"></param>
+        </member>
+        <member name="M:Questionnaire.API.HttpClientHelper.GetTokenJson(System.String)">
+            <summary>
+            获取Token中的Json数据
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

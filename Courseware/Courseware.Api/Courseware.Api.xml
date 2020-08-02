@@ -1,0 +1,746 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Courseware.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Courseware.Api.Common.FastDfsHelper.ZipFileDownLoad(System.String,System.String,System.String)">
+            <summary>
+            下载SCORM资源压缩包
+            </summary>
+            <param name="resourceName"></param>
+            <param name="fastDfsPath"></param>
+            <param name="folder"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Courseware.Api.Common.FieldCheck.CheckingStatus">
+            <summary>
+            审核中
+            </summary>
+        </member>
+        <member name="F:Courseware.Api.Common.FieldCheck.PassStatus">
+            <summary>
+            通过
+            </summary>
+        </member>
+        <member name="F:Courseware.Api.Common.FieldCheck.FailStatus">
+            <summary>
+            拒绝
+            </summary>
+        </member>
+        <member name="F:Courseware.Api.Common.FieldCheck.ResourceLevel1">
+            <summary>
+            非密
+            </summary>
+        </member>
+        <member name="F:Courseware.Api.Common.FieldCheck.ResourceLevel2">
+            <summary>
+            内部
+            </summary>
+        </member>
+        <member name="F:Courseware.Api.Common.FieldCheck.ResourceLevel3">
+            <summary>
+            秘密
+            </summary>
+        </member>
+        <member name="M:Courseware.Api.Common.FileSystemHelper.GetUniqueFileName(System.String)">
+            <summary>
+            注意sPath是完整的物理路径，如果文件不存在，包括文件名将返回空白
+            </summary>
+            <param name="sPath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Courseware.Api.Common.SCORMUploadHelper">
+            <summary>
+            Get some information about the course from the imsmanifest`.xml file
+            从imsmanifest ' .xml文件中获得有关该课程的一些信息
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.Common.SCORMUploadHelper.Identifier">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.Common.SCORMUploadHelper.Title">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.Common.SCORMUploadHelper.SCORM_Version">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.Common.SCORMUploadHelper.Version">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.Common.SCORMUploadHelper.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.Common.SCORMUploadHelper.Href">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.Common.SCORMUploadHelper.PathToManifest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.Common.SCORMUploadHelper.PathToPackageFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Courseware.Api.Common.SCORMUploadHelper.ParseManifest(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="pathToManifest"></param>
+        </member>
+        <member name="M:Courseware.Api.Common.SCORMUploadHelper.GetSCORMVersion(adlcp_rootv1p2.imscp.manifestType)">
+            <summary>
+            get the SCORM version by examining the namespace declaration
+            People have misused the "Version" attribute so you can't depend on it.
+            Version SHOULD be in the metadata but some people don't even include that.
+            通过检查名称空间声明，获得SCORM版本，因为人们误用了“version”属性，所以不能依赖它。
+            版本应该在元数据中，但是有些人甚至不包括它。
+            </summary>
+            <param name="root"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.FileController.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment,Courseware.Infrastructure.Repository.UnitOfWork,AutoMapper.IMapper,ApiUtil.Mq.RabbitMqClient,Microsoft.Extensions.Logging.ILogger{Courseware.Api.Controllers.FileController},ApiUtil.ServiceHelper)">
+            <summary>
+            
+            </summary>
+            <param name="env"></param>
+            <param name="unitOfWork"></param>
+            <param name="mapper"></param>
+            <param name="mqClient"></param>
+            <param name="logger"></param>
+            <param name="service"></param>
+        </member>
+        <member name="M:Courseware.Api.Controllers.FileController.UpdateFileInfo(Courseware.Api.ViewModel.FileUpDown.UploadFileInfo)">
+            <summary>
+            上传课件信息
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.FileController.ScormResult(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="resourceName"></param>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.FileController.TransformComplete(Courseware.Api.ViewModel.FileUpDown.TransformComplete)">
+            <summary>
+            文件转换完成通知
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.FileController.RequestUploadFile(Courseware.Api.ViewModel.FileUpDown.RequestFileUploadEntity)">
+            <summary>
+            请求上传文件
+            </summary>
+            <param name="requestFile">请求上传参数实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.FileController.FileSave">
+            <summary>
+            文件上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.FileController.FileMerge(Courseware.Api.ViewModel.FileUpDown.FileMergeDto)">
+            <summary>
+            文件合并
+            </summary>
+            <param name="fileInfo">文件参数信息[name]</param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.FileController.GetCryptoString(System.IO.Stream)">
+            <summary>
+            文件流加密
+            </summary>
+            <param name="fileStream"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Courseware.Api.Controllers.ManageController">
+            <summary>
+            课件管理服务
+            </summary>
+        </member>
+        <member name="M:Courseware.Api.Controllers.ManageController.#ctor(Courseware.Infrastructure.Repository.UnitOfWork,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger{Courseware.Api.Controllers.ManageController},ApiUtil.Mq.RabbitMqClient,ApiUtil.ServiceHelper)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="unitOfWork">仓储</param>
+            <param name="mapper"></param>
+            <param name="logger"></param>
+            <param name="mqClient"></param>
+            <param name="service"></param>
+        </member>
+        <member name="M:Courseware.Api.Controllers.ManageController.GetCourseResource(System.String,System.String,System.Int64,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            默认返回所有未删除已审核通过课件资源
+            </summary>
+            <param name="tagId">知识点id</param>
+            <param name="resourceType">video/flash/document/picture/zip</param>
+            <param name="keyword">关键字</param>
+            <param name="page">当前页码</param>
+            <param name="perPage">每页行数</param>
+            <param name="sortBy">createtime/filesize</param>
+            <param name="order">asc/desc</param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.ManageController.GetUserCourseResource(System.Int64,System.String,System.String,System.Int64,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            默认返回相关用户的所有未删除的课件资源
+            </summary>
+            <param name="userId">用户id</param>
+            <param name="tagId">知识点id</param>
+            <param name="resourceType">video/flash/document/picture/zip</param>
+            <param name="keyword">关键字</param>
+            <param name="page">当前页码</param>
+            <param name="perPage">每页行数</param>
+            <param name="sortBy">createtime/filesize</param>
+            <param name="order">asc/desc</param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.ManageController.PreviewCourseware(System.Int64)">
+            <summary>
+            课件预览
+            </summary>
+            <param name="id">资源id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.ManageController.SingleDetail(System.Int64)">
+            <summary>
+            单条课件详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.ManageController.ResourceSetTags(System.Collections.Generic.IList{Courseware.Api.ViewModel.Manage.SetTagDto})">
+            <summary>
+            设置知识点标签
+            </summary>
+            <param name="relations"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.ManageController.ResourceRename(Courseware.Api.ViewModel.Manage.RenameDto)">
+            <summary>
+            资源名修改
+            </summary>
+            <param name="resource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.ManageController.SourceChecked(System.String,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            已审核资源
+            </summary>
+            <param name="keyword">关键字</param>
+            <param name="page">页码</param>
+            <param name="perPage">每页行数</param>
+            <param name="sortBy">排序字段,createtime/</param>
+            <param name="order">正序反序</param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.ManageController.SourceUnChecked(System.String,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            未审核资源
+            </summary>
+            <param name="keyword">关键字</param>
+            <param name="page">页码</param>
+            <param name="perPage">每页行数</param>
+            <param name="sortBy">排序字段,createtime/</param>
+            <param name="order">正序反序</param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.ManageController.MultiResourceOption(System.String,Courseware.Api.ViewModel.Manage.MultiCheckOption)">
+            <summary>
+            批量同意或拒绝
+            </summary>
+            <param name="option">pass/fail</param>
+            <param name="multiResourceOption"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.ManageController.SingleResourceOption(System.String,Courseware.Api.ViewModel.Manage.CheckOption)">
+            <summary>
+            审核单条资源
+            </summary>
+            <param name="option">pass/fail</param>
+            <param name="checkOption">json</param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.ManageController.DeleteSingleResource(System.Int64)">
+            <summary>
+            单个删除
+            </summary>
+            <param name="id">资源id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.ManageController.DeleteMultiResource(System.Collections.Generic.IList{System.Int64})">
+            <summary>
+            批量删除
+            </summary>
+            <param name="delObjects">需要删除的对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.TestController.CreateTagSeed(System.Int32)">
+            <summary>
+            创建知识点种子数据
+            </summary>
+            <param name="count">种子数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.TestController.DeleteTagSeed">
+            <summary>
+            清空种子数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.TestController.CreateResourceSeed(System.Int32)">
+            <summary>
+            创建资源种子
+            </summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.TestController.DeleteResourceSeed">
+            <summary>
+            清空资源种子
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.TestController.CreateRelation(System.Int32)">
+            <summary>
+            创建资源种子和知识点种子的关系
+            </summary>
+            <param name="count">创建数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.TestController.DeleteRelation">
+            <summary>
+            删除关联表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.TestController.CreateSeedResource(System.Int32)">
+            <summary>
+            创建资源种子
+            </summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.TestController.DeleteSeekResource">
+            <summary>
+            删除资源种子
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.TestController.CreateResourceTagRef(System.Int32)">
+            <summary>
+            创建关联表种子
+            </summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.TestController.DeleteSeekRelation">
+            <summary>
+            删除关联表种子
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.TestController.CreateSeedTag(System.Int32)">
+            <summary>
+            创建知识点种子
+            </summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Api.Controllers.TestController.DeleteSeedTag">
+            <summary>
+            删除知识点种子
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Courseware.Api.ViewModel.FileUpDown.RequestFileUploadEntity">
+            <summary>
+            文件请求上传实体
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.FileUpDown.RequestFileUploadEntity.Size">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.FileUpDown.RequestFileUploadEntity.Count">
+            <summary>
+            片段数量
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.FileUpDown.RequestFileUploadEntity.FileData">
+            <summary>
+            文件MD5
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.FileUpDown.RequestFileUploadEntity.FileExt">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.FileUpDown.RequestFileUploadEntity.Filename">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="T:Courseware.Api.ViewModel.FileUpDown.TransformComplete">
+            <summary>
+            课件转换完成
+            </summary>
+        </member>
+        <member name="T:Courseware.Api.ViewModel.FileUpDown.UploadFileInfo">
+            <summary>
+            上传的课件文件信息
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.FileUpDown.UploadFileInfo.OriginalUrl">
+            <summary>
+            原始文件路径
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.FileUpDown.UploadFileInfo.FileSuffix">
+            <summary>
+            文件后缀名
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.FileUpDown.UploadFileInfo.FileSize">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.FileUpDown.UploadFileInfo.GroupName">
+            <summary>
+            组名
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.FileUpDown.UploadFileInfo.ResourceDuration">
+            <summary>
+            资源时长
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.FileUpDown.UploadFileInfo.ResourceName">
+            <summary>
+            资源名
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.FileUpDown.UploadFileInfo.ResourceType">
+            <summary>
+            资源类型
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.FileUpDown.UploadFileInfo.FileSizeDisplay">
+            <summary>
+            资源文件大小--显示用
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.FileUpDown.UploadFileInfo.CreatorId">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.FileUpDown.UploadFileInfo.CreatorName">
+            <summary>
+            创建人名
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.FileUpDown.UploadFileInfo.ResourceLevel">
+            <summary>
+            资源密级
+            </summary>
+        </member>
+        <member name="T:Courseware.Api.ViewModel.Manage.CheckOption">
+            <summary>
+            课件审核操作
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.CheckOption.Id">
+            <summary>
+            资源id
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.CheckOption.CheckerId">
+            <summary>
+            审核人id
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.CheckOption.CheckerName">
+            <summary>
+            审核人名
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.CheckOption.CheckRemark">
+            <summary>
+            审核备注
+            </summary>
+        </member>
+        <member name="T:Courseware.Api.ViewModel.Manage.KnowledgeTagDto">
+            <summary>
+            知识点内容
+            </summary>
+        </member>
+        <member name="T:Courseware.Api.ViewModel.Manage.MultiCheckOption">
+            <summary>
+            课件批量审核
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.MultiCheckOption.CheckerId">
+            <summary>
+            审核人id
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.MultiCheckOption.CheckerName">
+            <summary>
+            审核人名
+            </summary>
+        </member>
+        <member name="T:Courseware.Api.ViewModel.Manage.RenameDto">
+            <summary>
+            课件重命名
+            </summary>
+        </member>
+        <member name="T:Courseware.Api.ViewModel.Manage.ResourceTagDto">
+            <summary>
+            资源标签关联
+            </summary>
+        </member>
+        <member name="T:Courseware.Api.ViewModel.Manage.Resource.ResourceAllDto">
+            <summary>
+            课件一览
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceAllDto.ResourceDesc">
+            <summary>
+            资源描述
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceAllDto.ResourceDuration">
+            <summary>
+            持续时长
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceAllDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceAllDto.CreatorName">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="T:Courseware.Api.ViewModel.Manage.Resource.ResourceCheckedDto">
+            <summary>
+            课件审核一览
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceCheckedDto.CheckDate">
+            <summary>
+            审核时间
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceCheckedDto.CheckerName">
+            <summary>
+            审核人
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceCheckedDto.CheckStatus">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceCheckedDto.CheckRemark">
+            <summary>
+            审核备注
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceDtoBase.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceDtoBase.ResourceName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceDtoBase.ResourceType">
+            <summary>
+            资源类型
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceDtoBase.ResourceLevel">
+            <summary>
+            资源密级
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceDtoBase.ResourceTagsDisplay">
+            <summary>
+            知识点
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceDtoBase.FileSizeDisplay">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceDtoBase.ResourceUrl">
+            <summary>
+            资源全路径
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceDtoBase.GroupName">
+            <summary>
+            组名
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceDtoBase.TransformUrl">
+            <summary>
+            文件转换后的路径
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceDtoBase.FileSuffix">
+            <summary>
+            文件后缀名
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceDtoBase.TransfType">
+            <summary>
+            文件转换状态
+            </summary>
+        </member>
+        <member name="T:Courseware.Api.ViewModel.Manage.Resource.ResourceMineDto">
+            <summary>
+            我的课件一览
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceMineDto.ResourceDuration">
+            <summary>
+            持续时长
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceMineDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceMineDto.CreatorName">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceMineDto.CheckStatus">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceMineDto.CheckRemark">
+            <summary>
+            审核备注
+            </summary>
+        </member>
+        <member name="T:Courseware.Api.ViewModel.Manage.Resource.ResourceUnCheckedDto">
+            <summary>
+            课件未审核一览
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceUnCheckedDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceUnCheckedDto.CreatorName">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Manage.Resource.ResourceUnCheckedDto.CheckStatus">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+        <member name="T:Courseware.Api.ViewModel.Manage.SetTagDto">
+            <summary>
+            知识点设置
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Scorm.LMSInfo.sessionId">
+            <summary>
+            用于标识目的的SessionID
+            SessionID for identification purposes
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Scorm.LMSInfo.userId">
+            <summary>
+            user_id
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Scorm.LMSInfo.scoIdentifier">
+            <summary>
+            SCO的标识符(来自清单，不保证惟一)
+            Identifier for the SCO (from the manifest, not guaranteed to be unique)
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Scorm.LMSInfo.scormCourseId">
+            <summary>
+            SCORM课程的标识符
+            Identifier for the SCORM course
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Scorm.LMSInfo.dataItem">
+            <summary>
+            用于LMSSet/Get调用的DataItem
+            DataItem for LMSSet/Get Calls
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Scorm.LMSInfo.dataValue">
+            <summary>
+            LMSSet/Get调用的数据值
+            Data value for LMSSet/Get calls
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Scorm.LMSInfo.errorCode">
+            <summary>
+            错误代码(或“0”表示没有错误)
+            Error Code (Or "0" for no error)
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Scorm.LMSInfo.errorString">
+            <summary>
+            与ErrorCode对应的错误字符串
+            Error String corresponding to ErrorCode
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Scorm.LMSInfo.errorDiagnostic">
+            <summary>
+            错误诊断-关于错误的附加信息
+            Error Diagnostic - additional info about the error
+            </summary>
+        </member>
+        <member name="P:Courseware.Api.ViewModel.Scorm.LMSInfo.returnValue">
+            <summary>
+            返回给调用者的值(有时为“true”或“false”)
+            Value to be returned to caller (sometimes this is just "true" or "false")
+            </summary>
+        </member>
+    </members>
+</doc>

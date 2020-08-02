@@ -1,0 +1,11 @@
+{
+  "ConnectionStrings": {
+    "conn": "server=192.168.1.149;userid=root;pwd=root;port=3306;database=pf_knowledge_tag;sslmode=none;"
+    //"conn": "JXKUFYuFniIygzLugSGo0b7p8uCb0lBhsB3OOKsjsa1TyUuw11QkNktQVXemiZMaZiP9FAk7IbncT8euBjEa8wjT3LIqSjK6h6G8vXmLTnvSGDxIjAmrG/1ZKJT0IaSx"
+  },
+  "UserName": "guest",
+  "Password": "guest",
+  "HostName": "192.168.1.171",
+  "Port": "5673",
+  "TokenUrl": "http://puxuplus-admin-service/adminv1/token/getTokenInfo?token="
+}

@@ -1,0 +1,17 @@
+{
+  "ConnectionStrings": {
+    "conn": "server=192.168.1.143;userid=root;pwd=root;port=3306;database=pf_course_manage;sslmode=none;"
+  },
+  "UserName": "guest",
+  "Password": "guest",
+  "HostName": "192.168.1.171",
+  "Port": "5673",
+  "Exchange": "topic_exchange",
+  "RoutingKey1": "topic.logmsg",
+  "RoutingKey2": "topic.todomsg",
+  "RoutingKey3": "topic.msg",
+  "FastDFSUrl": "http://192.168.1.171:8088/",
+  "TokenUrl": "http://puxuplus-admin-service/adminv1/token/getTokenInfo?token=",
+  "GetStuUrl": "http://192.168.1.162:9557/peoplemanager/v1/otherServer/filterShow/student",
+  "SaveStuUrl": "http://192.168.1.162:9557/peoplemanager/v1/otherServer/selectPersons/student"
+}

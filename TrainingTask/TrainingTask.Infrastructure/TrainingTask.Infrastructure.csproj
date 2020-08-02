@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>E:\Project\puxuplus-server-for-net\TrainingTask\TrainingTask.Infrastructure\TrainingTask.Infrastructure.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20191102074806_Init.cs" />
+    <Compile Remove="Migrations\20191103114315_Init.cs" />
+    <Compile Remove="Migrations\20191103185156_Update1.cs" />
+    <Compile Remove="Migrations\20191103185310_init.cs" />
+    <Compile Remove="Migrations\20191104004308_Init.cs" />
+    <Compile Remove="Migrations\20191104004551_Init.cs" />
+    <Compile Remove="Migrations\20191104032256_CopyField.cs" />
+    <Compile Remove="Migrations\20191114020658_SubjectAddDesc.cs" />
+    <Compile Remove="Migrations\20191114105415_ChangeSubjectId.cs" />
+    <Compile Remove="Migrations\20191114105647_InitMigration.cs" />
+    <Compile Remove="Migrations\20191205060640_AddField_Duration.cs" />
+    <Compile Remove="Migrations\20191205062329_Initial.cs" />
+    <Compile Remove="Migrations\20191205070709_Initial.cs" />
+    <Compile Remove="Migrations\20191205072301_Initial.cs" />
+    <Compile Remove="Migrations\20191205105449_Add_StatisticsField.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".gitignore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ApiUtil" Version="0.5.2" />
+    <PackageReference Include="LinqKit.Microsoft.EntityFrameworkCore" Version="1.1.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.6" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.2.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TrainingTask.Core\TrainingTask.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="TrainingTask.Infrastructure.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

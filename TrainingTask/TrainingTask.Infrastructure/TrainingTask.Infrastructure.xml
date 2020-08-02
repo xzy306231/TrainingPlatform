@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TrainingTask.Infrastructure</name>
+    </assembly>
+    <members>
+        <member name="P:TrainingTask.Infrastructure.Database.MyContext.TaskInfos">
+            <summary>
+            训练任务表
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Infrastructure.Database.MyContext.RelationInfos">
+            <summary>
+            训练科目表
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Infrastructure.Database.MyContext.TaskSubjectRefInfos">
+            <summary>
+            任务科目关联表
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Infrastructure.Database.MyContext.TagInfos">
+            <summary>
+            知识点表
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Infrastructure.Database.MyContext.SubjectTagRefInfos">
+            <summary>
+            科目知识点关联表
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Infrastructure.Database.MyContext.TaskScoreInfos">
+            <summary>
+            任务成绩表
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Infrastructure.Database.MyContext.SubjectScoreInfos">
+            <summary>
+            科目成绩表
+            </summary>
+        </member>
+        <member name="M:TrainingTask.Infrastructure.Repository.RepositoryBase`1.GetPageAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            分页查询异步
+            </summary>
+            <param name="whereLambda">查询添加（可有，可无）</param>
+            <param name="orderBy">排序条件（一定要有）</param>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页大小</param>
+            <param name="isOrder">排序正反</param>
+            <param name="isNoTracking"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingTask.Infrastructure.Repository.RepositoryBase`1.GetPageAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            分页查询异步
+            </summary>
+            <param name="whereLambda">查询添加（可有，可无）</param>
+            <param name="ordering">排序条件（一定要有，多个用逗号隔开，倒序开头用-号）</param>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页大小</param>
+            <param name="isNoTracking"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrainingTask.Infrastructure.Repository.RepositoryBase`1.GetPage(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="whereLambda">查询添加（可有，可无）</param>
+            <param name="ordering">排序条件（一定要有，多个用逗号隔开，倒序开头用-号）</param>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页大小</param>
+            <param name="isNoTracking"></param>
+            <returns></returns>
+        </member>
+        <member name="P:TrainingTask.Infrastructure.Repository.UnitOfWork.TaskRep">
+            <summary>
+            训练任务仓储
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Infrastructure.Repository.UnitOfWork.SubjectRep">
+            <summary>
+            训练科目仓储
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Infrastructure.Repository.UnitOfWork.TaskSubjectRefRep">
+            <summary>
+            训练任务科目关联表仓储
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Infrastructure.Repository.UnitOfWork.TagRep">
+            <summary>
+            知识点仓储
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Infrastructure.Repository.UnitOfWork.SubjectTagRefRep">
+            <summary>
+            训练任务知识点关联表仓储
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Infrastructure.Repository.UnitOfWork.TaskScoreRep">
+            <summary>
+            任务成绩仓储
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Infrastructure.Repository.UnitOfWork.SubjectScoreRep">
+            <summary>
+            科目成绩仓储
+            </summary>
+        </member>
+        <member name="M:TrainingTask.Infrastructure.Repository.UnitOfWork.#ctor(TrainingTask.Infrastructure.Database.MyContext)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+        </member>
+        <member name="M:TrainingTask.Infrastructure.Repository.UnitOfWork.SaveChanges">
+            <summary>
+            保存
+            </summary>
+        </member>
+        <member name="M:TrainingTask.Infrastructure.Repository.UnitOfWork.RollBackChanges">
+            <summary>
+            回滚
+            </summary>
+        </member>
+        <member name="F:TrainingTask.Infrastructure.Repository.UnitOfWork.disposed">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+    </members>
+</doc>

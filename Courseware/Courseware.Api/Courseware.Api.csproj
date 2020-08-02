@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <UserSecretsId>72733d38-e0f7-4daa-881c-2bd7c78b082e</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>.\Courseware.Api.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;1591</NoWarn>
+    <DocumentationFile>.\Courseware.Api.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\SCORMCourses\**" />
+    <Compile Remove="wwwroot\SCORMPackages\**" />
+    <Content Remove="wwwroot\SCORMCourses\**" />
+    <Content Remove="wwwroot\SCORMPackages\**" />
+    <EmbeddedResource Remove="wwwroot\SCORMCourses\**" />
+    <EmbeddedResource Remove="wwwroot\SCORMPackages\**" />
+    <None Remove="wwwroot\SCORMCourses\**" />
+    <None Remove="wwwroot\SCORMPackages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".gitignore" />
+    <None Remove="internal-nlog.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.19" />
+    <PackageReference Include="Pivotal.Discovery.ClientCore" Version="2.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+    <PackageReference Include="System.IO.Compression.ZipFile" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\SCORM\adlcp_rootv1p2\adlcp_rootv1p2.csproj" />
+    <ProjectReference Include="..\..\SCORM\adlcp_v1p3\adlcp_v1p3.csproj" />
+    <ProjectReference Include="..\..\SCORM\Altova\Altova.csproj" />
+    <ProjectReference Include="..\..\SCORM\imscp_rootv1p1p2\imscp_rootv1p1p2.csproj" />
+    <ProjectReference Include="..\..\SCORM\imsmd_rootv1p2p1\imsmd_rootv1p2p1.csproj" />
+    <ProjectReference Include="..\Courseware.Core\Courseware.Core.csproj" />
+    <ProjectReference Include="..\Courseware.Infrastructure\Courseware.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Courseware.Api.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Dockerfile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+</Project>

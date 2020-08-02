@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Courseware.Infrastructure</name>
+    </assembly>
+    <members>
+        <member name="M:Courseware.Infrastructure.Repository.RepositoryBase`1.GetPageAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            分页查询异步
+            </summary>
+            <param name="whereLambda">查询添加（可有，可无）</param>
+            <param name="ordering">排序条件（一定要有）</param>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页大小</param>
+            <param name="isOrder">排序正反</param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Infrastructure.Repository.RepositoryBase`1.GetPageAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            分页查询异步
+            </summary>
+            <param name="whereLambda">查询添加（可有，可无）</param>
+            <param name="ordering">排序条件（一定要有，多个用逗号隔开，倒序开头用-号）</param>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:Courseware.Infrastructure.Repository.RepositoryBase`1.GetPage(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="whereLambda">查询添加（可有，可无）</param>
+            <param name="ordering">排序条件（一定要有，多个用逗号隔开，倒序开头用-号）</param>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页大小</param>
+            <returns></returns>
+        </member>
+        <member name="P:Courseware.Infrastructure.Repository.UnitOfWork.ResourceRepository">
+            <summary>
+            资源仓储
+            </summary>
+        </member>
+        <member name="P:Courseware.Infrastructure.Repository.UnitOfWork.TagRepository">
+            <summary>
+            标签仓储
+            </summary>
+        </member>
+        <member name="P:Courseware.Infrastructure.Repository.UnitOfWork.ResourceTagRepository">
+            <summary>
+            中间表仓储
+            </summary>
+        </member>
+        <member name="M:Courseware.Infrastructure.Repository.UnitOfWork.#ctor(Courseware.Infrastructure.Database.MyContext)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+        </member>
+        <member name="M:Courseware.Infrastructure.Repository.UnitOfWork.SaveChanges">
+            <summary>
+            保存
+            </summary>
+        </member>
+        <member name="M:Courseware.Infrastructure.Repository.UnitOfWork.RollBackChanges">
+            <summary>
+            回滚
+            </summary>
+        </member>
+        <member name="F:Courseware.Infrastructure.Repository.UnitOfWork.disposed">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+    </members>
+</doc>

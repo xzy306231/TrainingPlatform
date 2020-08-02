@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PaperQuestions.API</name>
+    </assembly>
+    <members>
+        <member name="T:PaperQuestions.API.Controllers.PaperQuestionController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.PaperQuestionController.TestPaperImportToDB(PaperInfomation)">
+            <summary>
+            
+            </summary>
+            <param name="paperInfomation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.QuestionsController.GetQuestions(System.String,System.String,System.String,System.String,System.Boolean,System.String,System.Int32,System.Int32)">
+            <summary>
+            查询试题
+            </summary>
+            <param name="questionType"></param>
+            <param name="complexity"></param>
+            <param name="publishFlag"></param>
+            <param name="keyWord"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.QuestionsController.DeleteQuestions(PaperQuestions.BLL.QusetionIDList)">
+            <summary>
+            删除试题
+            </summary>
+            <param name="qusetionIDList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.QuestionsController.PublishBatchQuestions(PaperQuestions.BLL.QusetionIDList)">
+            <summary>
+            批量发布
+            </summary>
+            <param name="qusetionIDList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.QuestionsController.GetQuestionByID(System.Int64)">
+            <summary>
+            根据ID查找试题信息
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.QuestionsController.CreateQuestions(PaperQuestions.BLL.questionInfo)">
+            <summary>
+            创建试题
+            </summary>
+            <param name="questionInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.QuestionsController.UpdateQuestion(PaperQuestions.BLL.questionInfo)">
+            <summary>
+            修改试题
+            </summary>
+            <param name="questionInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.QuestionsController.ImportQuestions(Questionmation)">
+            <summary>
+            试题导入
+            </summary>
+            <param name="questionmation"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,359 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PaperQuestions.API</name>
+    </assembly>
+    <members>
+        <member name="T:PaperQuestions.API.Controllers.ApprovalPapersController">
+            <summary>
+            试卷审核
+            </summary>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.ApprovalPapersController.GetNotApprovalTestPapers(System.String,System.Boolean,System.String,System.Int32,System.Int32)">
+            <summary>
+            未审核
+            </summary>
+            <param name="keyWord"></param>
+            <param name="IsAsc"></param>
+            <param name="FieldName"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.ApprovalPapersController.GetApprovaledTestPapers(System.String,System.Boolean,System.String,System.Int32,System.Int32)">
+            <summary>
+            已审核
+            </summary>
+            <param name="keyWord"></param>
+            <param name="IsAsc"></param>
+            <param name="FieldName"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.ApprovalPapersController.ApprovalTestPapers(System.Collections.Generic.List{PaperQuestions.BLL.PaperQuestionApproval})">
+            <summary>
+            审核
+            </summary>
+            <param name="paperQuestionApprovals"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.ApprovalPapersController.GetTestPaperInfo(System.Int64)">
+            <summary>
+            试卷信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PaperQuestions.API.Controllers.BasketQuestionsController">
+            <summary>
+            试卷篮
+            </summary>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.BasketQuestionsController.GetBasketQuestions(System.String)">
+            <summary>
+            获取试卷篮试题
+            </summary>
+            <param name="userNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.BasketQuestionsController.BasketQuestionsSort(System.Collections.Generic.List{PaperQuestions.BLL.QuestionTypeScore})">
+            <summary>
+            试卷篮试题排序
+            </summary>
+            <param name="questionsSort"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.BasketQuestionsController.BasketQuestionTypeSort(System.Collections.Generic.List{PaperQuestions.BLL.QuestionTypeScore})">
+            <summary>
+            题型排序
+            </summary>
+            <param name="questionsSort"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.BasketQuestionsController.RemoveQuestionFromBasket(System.Int64)">
+            <summary>
+            删除试卷篮试题
+            </summary>
+            <param name="basketID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.BasketQuestionsController.RemoveQuestionByQuestionType(System.String)">
+            <summary>
+            按照题型删除试题
+            </summary>
+            <param name="questionType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.BasketQuestionsController.SetQuestionScore(System.Collections.Generic.List{PaperQuestions.BLL.QuestionTypeScore})">
+            <summary>
+            设置试题分值
+            </summary>
+            <param name="typeScoreList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.BasketQuestionsController.GetTestPaperAnalyze(System.String)">
+            <summary>
+            试卷分析
+            </summary>
+            <param name="userNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.BasketQuestionsController.SaveBasketQuestions(Paper)">
+            <summary>
+            保存试卷篮试题
+            </summary>
+            <param name="paperInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PaperQuestions.API.Controllers.IntelligentPapersController">
+            <summary>
+            智能组卷
+            </summary>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.IntelligentPapersController.GetQuestionTypeCount(PaperQuestions.BLL.IntelligentParameter)">
+            <summary>
+            根据题型获取相应的数量
+            </summary>
+            <param name="queryParameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.IntelligentPapersController.GetAllQuestionTypeCount(PaperQuestions.BLL.IntelligentParameter)">
+            <summary>
+            获取题型数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.IntelligentPapersController.IntelligentComposeTestPaper(PaperQuestions.BLL.IntelligentParameter)">
+            <summary>
+            智能组卷
+            </summary>
+            <param name="parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PaperQuestions.API.Controllers.KnowledgePaperController">
+            <summary>
+            知识点组卷
+            </summary>
+        </member>
+        <member name="T:PaperQuestions.API.Controllers.MyPaperController">
+            <summary>
+            我的组卷
+            </summary>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.MyPaperController.GetMyTestPaper(System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            我的组卷
+            </summary>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <param name="keyWord"></param>
+            <param name="userNumber"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.MyPaperController.ShareMyTestPaper(System.Int64)">
+            <summary>
+            分享我的组卷
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.MyPaperController.CancleShareMyTestPaper(System.Int64)">
+            <summary>
+            取消分享我的组卷
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.MyPaperController.RemoveTestPaper(System.Int64)">
+            <summary>
+            删除我的组卷
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.MyPaperController.RemoveQuestionFromTestPaper(System.Int64,System.Int64)">
+            <summary>
+            从试卷中删除试题
+            </summary>
+            <param name="id"></param>
+            <param name="paperid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.MyPaperController.RemoveQuestionsByType(System.String)">
+            <summary>
+            按题型删除试题
+            </summary>
+            <param name="questionType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.MyPaperController.SetQuestionsScore(System.Collections.Generic.List{PaperQuestions.BLL.QuestionTypeScore})">
+            <summary>
+            设置分值
+            </summary>
+            <param name="typeScoreList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.MyPaperController.MyTestPaperQuestionsSort(System.Collections.Generic.List{PaperQuestions.BLL.QuestionTypeScore})">
+            <summary>
+            试题排序
+            </summary>
+            <param name="questionsSort"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.MyPaperController.MyTestPaperQuestionTypeSort(System.Collections.Generic.List{PaperQuestions.BLL.QuestionTypeScore})">
+            <summary>
+            按题型排序
+            </summary>
+            <param name="questionsSort"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.MyPaperController.GetMyTestPaperQuestions(System.Int64)">
+            <summary>
+            获取我的组卷试卷信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.MyPaperController.EditTestPaperTitle(System.Int64,System.String)">
+            <summary>
+            编辑试卷标题
+            </summary>
+            <param name="paperid"></param>
+            <param name="paperTitle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.MyPaperController.GetMyTestPaperAnalyze(System.Int64)">
+            <summary>
+            试卷分析
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PaperQuestions.API.Controllers.PaperQuestionController">
+            <summary>
+            试卷导入
+            </summary>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.PaperQuestionController.TestPaperImportToDB(PaperInfomation)">
+            <summary>
+            
+            </summary>
+            <param name="paperInfomation"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PaperQuestions.API.Controllers.PapersLibraryController">
+            <summary>
+            试卷库
+            </summary>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.PapersLibraryController.GetTestPaper(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取试卷库列表
+            </summary>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <param name="keyWord"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.PapersLibraryController.ReuseTestPaper(System.Int64)">
+            <summary>
+            使用此卷
+            </summary>
+            <param name="paperid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PaperQuestions.API.Controllers.QuestionsController">
+            <summary>
+            题库管理
+            </summary>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.QuestionsController.GetQuestions(System.String,System.String,System.String,System.String,System.Boolean,System.String,System.Int32,System.Int32)">
+            <summary>
+            查询试题
+            </summary>
+            <param name="questionType"></param>
+            <param name="complexity"></param>
+            <param name="publishFlag"></param>
+            <param name="keyWord"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.QuestionsController.DeleteQuestions(PaperQuestions.BLL.QusetionIDList)">
+            <summary>
+            删除试题
+            </summary>
+            <param name="qusetionIDList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.QuestionsController.PublishBatchQuestions(PaperQuestions.BLL.QusetionIDList)">
+            <summary>
+            批量发布
+            </summary>
+            <param name="qusetionIDList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.QuestionsController.GetQuestionByID(System.Int64)">
+            <summary>
+            根据ID查找试题信息
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.QuestionsController.CreateQuestions(Question)">
+            <summary>
+            创建试题
+            </summary>
+            <param name="questionInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.QuestionsController.UpdateQuestion(Question)">
+            <summary>
+            修改试题
+            </summary>
+            <param name="questionInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.QuestionsController.ImportQuestions(Questionmation)">
+            <summary>
+            试题导入
+            </summary>
+            <param name="questionmation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.QuestionsController.GetNotApprovalQuestions(System.String,System.Boolean,System.String,System.Int32,System.Int32)">
+            <summary>
+            未审核
+            </summary>
+            <param name="keyWord"></param>
+            <param name="IsAsc"></param>
+            <param name="FieldName"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.QuestionsController.GetApprovaledQuestions(System.String,System.Boolean,System.String,System.Int32,System.Int32)">
+            <summary>
+            已审核
+            </summary>
+            <param name="keyWord"></param>
+            <param name="IsAsc"></param>
+            <param name="FieldName"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PaperQuestions.API.Controllers.QuestionsController.ApprovalQuestions(System.Collections.Generic.List{PaperQuestions.BLL.PaperQuestionApproval})">
+            <summary>
+            审核
+            </summary>
+            <param name="questionApprovals"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

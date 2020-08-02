@@ -1,0 +1,435 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TrainingTask.Core</name>
+    </assembly>
+    <members>
+        <member name="T:TrainingTask.Core.Entity.BaseEntity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.BaseEntity.DeleteFlag">
+            <summary>
+            逻辑删除
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.BaseEntity.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.BaseEntity.ModifiedTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:TrainingTask.Core.Entity.SubjectEntity">
+            <summary>
+            训练任务科目一对多
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectEntity.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectEntity.TaskId">
+            <summary>
+            任务id
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectEntity.OriginalId">
+            <summary>
+            原始表id
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectEntity.SubjectNumb">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectEntity.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectEntity.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectEntity.ClassifyKey">
+            <summary>
+            分类key
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectEntity.ClassifyValue">
+            <summary>
+            分类value
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectEntity.AirplaneKey">
+            <summary>
+            适用机型key
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectEntity.AirplaneValue">
+            <summary>
+            适用机型value
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectEntity.ExpectedResult">
+            <summary>
+            预期结果
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectEntity.TagDisplay">
+            <summary>
+            标签展示
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectEntity.Copy">
+            <summary>
+            副本
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectEntity.CreatorName">
+            <summary>
+            创建人名
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectEntity.FinishPercent">
+            <summary>
+            完成率
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectEntity.PassPercent">
+            <summary>
+            通过率
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectEntity.TaskRefEntities">
+            <summary>
+            任务科目关联表
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectEntity.TagRefEntities">
+            <summary>
+            知识点关联表
+            </summary>
+        </member>
+        <member name="T:TrainingTask.Core.Entity.SubjectScoreEntity">
+            <summary>
+            科目成绩
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectScoreEntity.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectScoreEntity.TaskId">
+            <summary>
+            任务成绩单id
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectScoreEntity.SubjectId">
+            <summary>
+            任务成绩单id
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectScoreEntity.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectScoreEntity.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectScoreEntity.TagDisplay">
+            <summary>
+            标签展示
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectScoreEntity.AirplaneValue">
+            <summary>
+            适用机型value
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectScoreEntity.ClassifyValue">
+            <summary>
+            分类value
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectScoreEntity.Result">
+            <summary>
+            科目结果
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectScoreEntity.Status">
+            <summary>
+            科目状态
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectScoreEntity.TaskScore">
+            <summary>
+            任务成绩
+            </summary>
+        </member>
+        <member name="T:TrainingTask.Core.Entity.SubjectTagRefEntity">
+            <summary>
+            科目知识点关联表
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectTagRefEntity.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectTagRefEntity.Subject">
+            <summary>
+            科目
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectTagRefEntity.TagId">
+            <summary>
+            知识点id
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.SubjectTagRefEntity.Tag">
+            <summary>
+            知识点
+            </summary>
+        </member>
+        <member name="T:TrainingTask.Core.Entity.TagEntity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TagEntity.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TagEntity.OriginalId">
+            <summary>
+            原始表中标签id
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TagEntity.TagName">
+            <summary>
+            标签名
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TagEntity.SubjectEntities">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TrainingTask.Core.Entity.TaskEntity">
+            <summary>
+            训练任务
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.TaskDesc">
+            <summary>
+            任务描述
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.TaskTypeKey">
+            <summary>
+            任务类别key
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.TaskTypeValue">
+            <summary>
+            任务类别value
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.TypeLevelKey">
+            <summary>
+            类别等级key
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.TypeLevelValue">
+            <summary>
+            类别等级value
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.LevelKey">
+            <summary>
+            级别等级key
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.LevelValue">
+            <summary>
+            级别等级value
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.AirplaneTypeKey">
+            <summary>
+            适用机型key
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.AirplaneTypeValue">
+            <summary>
+            适用机型value
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.ClassHour">
+            <summary>
+            课时
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.CreatorId">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.CreatorName">
+            <summary>
+            创建人名
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.TagDisplay">
+            <summary>
+            标签显示
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.Copy">
+            <summary>
+            副本
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.FinishPercent">
+            <summary>
+            完成率
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.PassPercent">
+            <summary>
+            通过率
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.DurationAvg">
+            <summary>
+            平均时长
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskEntity.SubjectRefEntities">
+            <summary>
+            任务科目关联表
+            </summary>
+        </member>
+        <member name="T:TrainingTask.Core.Entity.TaskScoreEntity">
+            <summary>
+            训练任务成绩
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskScoreEntity.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskScoreEntity.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskScoreEntity.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskScoreEntity.Department">
+            <summary>
+            所属部门
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskScoreEntity.PlanId">
+            <summary>
+            计划id
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskScoreEntity.TaskId">
+            <summary>
+            任务id
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskScoreEntity.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskScoreEntity.Result">
+            <summary>
+            任务结果
+            默认为1 未通过
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskScoreEntity.Status">
+            <summary>
+            任务状态
+            默认为1 未完成
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskScoreEntity.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskScoreEntity.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskScoreEntity.Duration">
+            <summary>
+            持续时长
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskScoreEntity.SubjectScores">
+            <summary>
+            科目成绩
+            </summary>
+        </member>
+        <member name="T:TrainingTask.Core.Entity.TaskSubjectRefEntity">
+            <summary>
+            任务科目关联表
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskSubjectRefEntity.TaskId">
+            <summary>
+            任务id
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskSubjectRefEntity.Task">
+            <summary>
+            任务
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskSubjectRefEntity.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:TrainingTask.Core.Entity.TaskSubjectRefEntity.Subject">
+            <summary>
+            科目
+            </summary>
+        </member>
+    </members>
+</doc>
